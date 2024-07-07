@@ -3,6 +3,8 @@ import { BsArrowRight } from "react-icons/bs";
 
 import { fadeIn } from "../../variants";
 import { useState } from "react";
+import Link from 'next/link';
+
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -14,7 +16,7 @@ const Contact = () => {
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/", {
+    fetch("https://formsubmit.co/contactus@metalcproductions.com", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
@@ -113,6 +115,21 @@ const Contact = () => {
           </motion.form>
         </div>
       </div>
+      {/* Down Arrow */}
+      <Link href="/blog" passHref legacyBehavior>
+        <motion.a
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <img
+            src="/arrow.png"
+            alt="Down Arrow"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
+          />
+        </motion.a>
+      </Link>
     </div>
   );
 };

@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
-
 import { fadeIn } from "../variants";
+import Link from 'next/link';
 import ParticlesContainer from "../components/ParticlesContainer";
 import SpaceshipsCanvas from "../components/canvas/Spaceships";
 
+import Head from 'next/head';
+
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
+    <>
+    <Head>
+        <title>MetAlc Productions</title>
+    </Head>
+    <div className="bg-primary/60 h-full relative">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
@@ -61,10 +67,25 @@ const Home = () => {
 
         {/* particles */}
         <ParticlesContainer />
-
-
       </div>
+      
+      {/* Down Arrow */}
+      <Link href="/about" passHref legacyBehavior>
+        <motion.a
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <img
+            src="/arrow.png"
+            alt="Down Arrow"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
+          />
+        </motion.a>
+      </Link>
     </div>
+  </>
   );
 };
 
