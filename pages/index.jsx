@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Link from 'next/link';
-import ParticlesContainer from "../components/ParticlesContainer";
-import SpaceshipsCanvas from "../components/canvas/Spaceships";
+// import ParticlesContainer from "../components/ParticlesContainer";
+// import SpaceshipsCanvas from "../components/canvas/Spaceships";
 import { Analytics } from "@vercel/analytics/react"
 
 import Head from 'next/head';
@@ -29,7 +29,7 @@ const Home = () => {
             MetAlc <br />
             <span className="text-accent">Productions</span>
           </motion.h1>
-          <SpaceshipsCanvas />
+          {/* <SpaceshipsCanvas /> */}
 
           {/* subtitle */}
           <motion.p
@@ -68,7 +68,7 @@ const Home = () => {
         />
 
         {/* particles */}
-        <ParticlesContainer />
+        {/* <ParticlesContainer /> */}
       </div>
       
       {/* Down Arrow */}
