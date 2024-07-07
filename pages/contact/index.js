@@ -1,78 +1,141 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { BsArrowRight } from "react-icons/bs";
+import { fadeIn } from "../../variants";
+import { useState } from "react";
 import Link from 'next/link';
-import ParticlesContainer from "../components/ParticlesContainer";
-import SpaceshipsCanvas from "../components/canvas/Spaceships";
-import { Analytics } from "@vercel/analytics/react"
 
-import Head from 'next/head';
 
-const Home = () => {
+const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsLoading(true);
+
+    fetch("https://formsubmit.co/metalcproductions@gmail.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        alert("Thank you. I will get back to you ASAP.");
+        // Clear form data after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => console.log(error))
+      .finally(() => setIsLoading(false));
+  };
+
   return (
-    <>
-    <Head>
-        <title>MetAlc Productions</title>
-    </Head>
-    <Analytics/>
-    <div className="bg-primary/60 h-full relative">
-      {/* text */}
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
-          {/* title */}
-          <motion.h1
-            variants={fadeIn("down", 0.2)}
+    <div className="h-full bg-primary/30">
+      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+        {/* text & form */}
+        <div className="flex flex-col w-full max-w-[700px]">
+          {/* text */}
+          <motion.h2
+            variants={fadeIn("up", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h2 text-center mb-12"
           >
-            MetAlc <br />
-            <span className="text-accent">Productions</span>
-          </motion.h1>
-          <SpaceshipsCanvas />
+            Let's <span className="text-accent">connect.</span>
+          </motion.h2>
 
-          {/* subtitle */}
-          <motion.p
-            variants={fadeIn("down", 0.3)}
+          {/* form */}
+          <motion.form
+            variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="flex-1 flex flex-col gap-6 w-full mx-auto"
+            onSubmit={handleSubmit}
+            autoComplete="off"
+            autoCapitalize="off"
           >
-            Transforming Ideas Into{" "}
-            <span className="text-accent">Digital Reality</span>
-          </motion.p>
+            {/* input group */}
+            <div className="flex gap-x-6 w-full">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="input"
+                value={formData.name}
+                onChange={handleChange}
+                disabled={isLoading}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                className="input"
+                value={formData.email}
+                onChange={handleChange}
+                disabled={isLoading}
+                required
+              />
+            </div>
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              className="input"
+              value={formData.subject}
+              onChange={handleChange}
+              disabled={isLoading}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message..."
+              className="textarea"
+              value={formData.message}
+              onChange={handleChange}
+              disabled={isLoading}
+              required
+            />
+            <button
+              type="submit"
+              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+              disabled={isLoading}
+              aria-disabled={isLoading}
+            >
+              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+                {isLoading ? "Submitting..." : "Let's talk"}
+              </span>
 
-          {/* btn */}
-          {/* <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
-          </div> */}
-          <motion.div
-            variants={fadeIn("down", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden xl:flex"
-          >
-            {/* <ProjectsBtn /> */}
-          </motion.div>
+              {!isLoading && (
+                <BsArrowRight
+                  className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
+                  aria-hidden
+                />
+              )}
+            </button>
+          </motion.form>
         </div>
       </div>
-      {/* image */}
-      <div className="w-[1280px] h-full absolute right-0 bottom-0">
-        {/* bg img */}
-        <div
-          role="img"
-          className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
-          aria-hidden
-        />
-
-        {/* particles */}
-        <ParticlesContainer />
-      </div>
-      
       {/* Down Arrow */}
-      <Link href="/about" passHref legacyBehavior>
+      <Link href="/blog" passHref legacyBehavior>
         <motion.a
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,8 +150,7 @@ const Home = () => {
         </motion.a>
       </Link>
     </div>
-  </>
   );
 };
 
-export default Home;
+export default Contact;
