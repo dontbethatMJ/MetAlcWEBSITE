@@ -3,6 +3,8 @@ import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import ServiceSlider from "../../components/ServiceSlider";
 import { fadeIn } from "../../variants";
+import Link from 'next/link';
+
 
 export const BlogData = [
   {
@@ -55,6 +57,21 @@ const Blog = () => {
           </div>
         </div>
       </div>
+      {/* Down Arrow */}
+      <Link href="/" passHref legacyBehavior>
+        <motion.a
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <img
+            src="/arrow.png"
+            alt="Down Arrow"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
+          />
+        </motion.a>
+      </Link>
     </div>
   );
 };
