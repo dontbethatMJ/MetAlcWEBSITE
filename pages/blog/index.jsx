@@ -12,7 +12,7 @@ export const BlogData = [
     date: 'March 1, 2024',
   },
   {
-    id: 2, 
+    id: 2,
     title: 'Another React Blog',
     content: 'Another blog content...',
     author: 'Jane Doe',
@@ -26,7 +26,21 @@ export const BlogData = [
     date: 'March 5, 2024',
   },
   {
-    id: 4, 
+    id: 4,
+    title: 'Another React Blog',
+    content: 'Another blog content...',
+    author: 'Jane Doe',
+    date: 'March 5, 2024',
+  },
+  {
+    id: 5,
+    title: 'Another React Blog',
+    content: 'Another blog content...',
+    author: 'Jane Doe',
+    date: 'March 5, 2024',
+  },
+  {
+    id: 6,
     title: 'Another React Blog',
     content: 'Another blog content...',
     author: 'Jane Doe',
@@ -36,9 +50,9 @@ export const BlogData = [
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-primary/30 py-32 text-center xl:text-left flex flex-col overflow-y-auto">
+    <div className="h-dvh bg-primary/30 py-32 text-center xl:text-left flex flex-col overflow-hidden relative">
       <Circles />
-      <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6 overflow-y-auto">
+      <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6 overflow-hidden">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -50,7 +64,7 @@ const Blog = () => {
           >
             Some EYE Catchy <span className="text-accent">Blogs</span>
           </motion.h2>
-          <div className="blog-list" style={{ fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: 'auto' }}>
+          <div className="blog-list-container" style={{ fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: 'auto', height: '60vh', overflowY: 'scroll' }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
               {BlogData.map((blog) => (
                 <motion.div
@@ -92,6 +106,29 @@ const Blog = () => {
           />
         </motion.a>
       </Link>
+      <style jsx global>{`
+        html, body {
+          overflow: hidden;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        #__next {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      `}</style>
+      <style jsx>{`
+        .blog-list-container {
+          -ms-overflow-style: none;  /* Internet Explorer 10+ */
+          scrollbar-width: none;  /* Firefox */
+        }
+
+        .blog-list-container::-webkit-scrollbar {
+          display: none;  /* Safari and Chrome */
+        }
+      `}</style>
     </div>
   );
 };

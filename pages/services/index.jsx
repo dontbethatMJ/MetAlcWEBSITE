@@ -1,17 +1,15 @@
 import { motion } from "framer-motion";
-
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import ServiceSlider from "../../components/ServiceSlider";
 import { fadeIn } from "../../variants";
 import Link from 'next/link';
 
-
 export const serviceData = [];
 
 const Services = () => {
   return (
-    <div className="h-full bg-primary/30 py-36 flex items-center">
+    <div className="h-screen bg-primary/30 py-36 flex items-center overflow-hidden relative">
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
@@ -66,6 +64,19 @@ const Services = () => {
           />
         </motion.a>
       </Link>
+      <style jsx global>{`
+        html, body {
+          overflow: hidden;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        #__next {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      `}</style>
     </div>
   );
 };
