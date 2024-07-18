@@ -4,11 +4,16 @@ import Circles from "../../components/Circles";
 import ServiceSlider from "../../components/ServiceSlider";
 import { fadeIn } from "../../variants";
 import Link from 'next/link';
+import Head from 'next/head';
 
 export const serviceData = [];
 
 const Services = () => {
   return (
+    <>
+    <Head>
+        <title>MetAlc Productions</title>
+    </Head>
     <div className="h-screen bg-primary/30 py-36 flex items-center overflow-hidden relative">
       <Circles />
       <div className="container mx-auto">
@@ -79,6 +84,7 @@ const Services = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

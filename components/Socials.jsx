@@ -3,8 +3,7 @@ import Link from "next/link";
 import {
   RiYoutubeLine,
   RiInstagramLine,
-  RiFacebookLine,
- 
+  RiLinkedinLine,
   RiGithubLine,
  
 } from "react-icons/ri";
@@ -21,9 +20,9 @@ export const socialData = [
     Icon: RiInstagramLine,
   },
   {
-    name: "Facebook",
-    link: "https://facebook.com",
-    Icon: RiFacebookLine,
+    name: "LinkedIn",
+    link: "https://linkedin.com",
+    Icon: RiLinkedinLine,
   },
   
   {

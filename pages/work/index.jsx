@@ -4,9 +4,14 @@ import Circles from "../../components/Circles";
 import WorkSlider from "../../components/WorkSlider";
 import { fadeIn } from "../../variants";
 import Link from 'next/link';
+import Head from 'next/head';
 
 const Work = () => {
   return (
+    <>
+    <Head>
+        <title>MetAlc Productions</title>
+    </Head>
     <div className="h-dvh bg-primary/30 py-36 flex items-center overflow-hidden relative">
       <Circles />
       <div className="container mx-auto">
@@ -77,6 +82,7 @@ const Work = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

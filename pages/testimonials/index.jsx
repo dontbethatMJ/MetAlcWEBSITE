@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import TestimonialSlider from "../../components/TestimonialSlider";
 import { fadeIn } from "../../variants";
 import Link from "next/link";
+import Head from 'next/head';
 
 const Testimonials = () => {
   const [name, setName] = useState("");
@@ -25,6 +26,10 @@ const Testimonials = () => {
   };
 
   return (
+    <>
+    <Head>
+        <title>MetAlc Productions</title>
+    </Head>
     <div className="h-full bg-primary/30 py-32 text-center">
       <div className="container mx-auto h-full flex flex-col justify-center">
         <motion.h2
@@ -129,6 +134,7 @@ const Testimonials = () => {
         </motion.a>
       </Link>
     </div>
+    </>
   );
 };
 

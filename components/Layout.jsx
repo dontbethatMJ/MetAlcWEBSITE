@@ -19,16 +19,16 @@ const Layout = ({ children }) => {
     >
       {/* metadata */}
       <Head>
-        <title>Startup</title>
+        <title>Metalc Productions</title>
         <meta
-          name="description"
-          content="Helping people to find work in gaming ."
+          name="MetAlcProductions"
+          content="Helping people to find work in gaming."
         />
         <meta
           name="keywords"
           content="unreal, blender, unity"
         />
-        <meta name="author" content="Ayush Pandey" />
+        <meta name="author" content="MetAlc" />
         <meta name="theme-color" content="#f13024" />
       </Head>
 
