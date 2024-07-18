@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
 import Link from 'next/link';
+import Head from 'next/head';
 
 export const BlogData = [
   {
@@ -50,6 +51,10 @@ export const BlogData = [
 
 const Blog = () => {
   return (
+    <>
+    <Head>
+      <title>MetAlc Productions</title>
+    </Head>
     <div className="h-dvh bg-primary/30 py-32 text-center xl:text-left flex flex-col overflow-hidden relative">
       <Circles />
       <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6 overflow-hidden">
@@ -131,6 +136,7 @@ const Blog = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

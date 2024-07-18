@@ -3,6 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { fadeIn } from "../../variants";
 import { useState } from "react";
 import Link from 'next/link';
+import Head from 'next/head';
 
 
 const Contact = () => {
@@ -46,6 +47,10 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <Head>
+        <title>MetAlc Productions</title>
+    </Head>
     <div className="h-full bg-primary/30">
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         {/* text & form */}
@@ -151,6 +156,7 @@ const Contact = () => {
         </motion.a>
       </Link>
     </div>
+    </>
   );
 };
 

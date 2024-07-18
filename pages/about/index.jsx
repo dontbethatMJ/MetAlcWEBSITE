@@ -5,6 +5,8 @@ import TeamMember from "../TeamMember";
 import Link from 'next/link';
 import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
+import Head from 'next/head';
+
 
 //  data
 export const aboutData = [
@@ -27,6 +29,10 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
+    <>
+    <Head>
+        <title>MetAlc Productions</title>
+    </Head>
     <div className="min-h-screen bg-primary/30 py-32 text-center xl:text-left flex flex-col overflow-hidden relative">
       <Circles />
 
@@ -122,10 +128,6 @@ const About = () => {
               imageSrc="https://tse1.mm.bing.net/th?id=OIP.cxcqa9RvhGnRd8x3N2oBdgHaHn&pid=Api&P=0&h=180"
             />
           </div>
-          {/* <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items -center xl:items-start">
-            
-          </div> */}
-
           <motion.div
             variants={fadeIn("left", 0.4)}
             initial="hidden"
@@ -153,6 +155,7 @@ const About = () => {
         </motion.a>
       </Link>
     </div>
+    </>
   );
 };
 
