@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css'; // Make sure to import the Swiper bundle CSS
+import 'swiper/swiper-bundle.css';
 import { RxArrowTopRight, RxCrop, RxPencil2, RxDesktop, RxReader, RxRocket } from 'react-icons/rx';
 
 const serviceData = [

@@ -50,12 +50,13 @@ const Services = () => {
       </div>
       <Bulb />
       {/* Down Arrow */}
-      <Link href="/work" passHref legacyBehavior>
+      <Link href="/work" passHref>
         <motion.a
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
             src="/arrow.png"
