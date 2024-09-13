@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/mjcheonma",
+      "destination": "https://mjcheonma.itch.io",
+      "permanent": true
+    }
+  ]
+}
