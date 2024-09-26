@@ -78,7 +78,7 @@ const Home = () => {
     </div>
 
     {/* Black box section */}
-    <div className="w-full h-[40vh] bg-black flex items-center justify-center relative">
+    <div className="w-full h-[30vh] bg-black flex items-center justify-center relative">
       <p className="text-white text-4xl text-center w-[69%] leading-[3rem] absolute top-[-3.5rem] displayfont text-bold">
       We are a small venture building and providing services and assets to the public while working on projects in the domain of Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
       </p>
