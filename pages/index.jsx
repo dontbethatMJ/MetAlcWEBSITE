@@ -2,10 +2,19 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/react"
+import { useEffect, useRef } from 'react';
 
 import Head from 'next/head';
 
 const Home = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.volume = 0.2; // Set volume to 20%
+    }
+  }, []);
+
   return (
     <>
     <Head>
@@ -71,6 +80,23 @@ const Home = () => {
           />
         </motion.a>
       </Link>
+    </div>
+
+    {/* Video section */}
+    <div className="w-full h-screen overflow-hidden">
+      <video
+        ref={videoRef}
+        src="/vdo.mp4"
+        autoPlay
+        loop
+        playsInline
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+    {/* New half-height black section */}
+    <div className="w-full h-[50vh] bg-black">
+      {/* Add content for this section here */}
     </div>
   </>
   );
