@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Link from 'next/link';
-import ParticlesContainer from "../components/ParticlesContainer";
-import SpaceshipsCanvas from "../components/canvas/Spaceships";
 import { Analytics } from "@vercel/analytics/react"
 
 import Head from 'next/head';
@@ -27,8 +25,6 @@ const Home = () => {
             MetAlc <br />
             <span className="text-accent">Productions</span>
           </motion.h1>
-
-          <SpaceshipsCanvas />
 
           <motion.p
             variants={fadeIn("down", 0.3)}
@@ -58,11 +54,9 @@ const Home = () => {
           aria-hidden
         />
 
-        <ParticlesContainer />
-
       </div>
       
-      <Link href="/about" passHref>
+      <Link href="/about" passHref legacyBehavior>
         <motion.a
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
