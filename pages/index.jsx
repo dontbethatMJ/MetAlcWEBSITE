@@ -2,18 +2,51 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/react"
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Head from 'next/head';
 
 const Home = () => {
-  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+  const playerRef = useRef(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.volume = 0.2; // Set volume to 20%
-    }
+    // Load the YouTube Player API script
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Create YouTube player when API is ready
+    window.onYouTubeIframeAPIReady = () => {
+      playerRef.current = new window.YT.Player('youtube-player', {
+        videoId: 'F-2lSWJ8Zxw',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          loop: 1,
+          playlist: 'F-2lSWJ8Zxw',
+          mute: 1
+        },
+        events: {
+          onReady: (event) => {
+            event.target.setVolume(20);
+          }
+        }
+      });
+    };
   }, []);
+
+  const toggleMute = () => {
+    if (playerRef.current) {
+      if (isMuted) {
+        playerRef.current.unMute();
+      } else {
+        playerRef.current.mute();
+      }
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <>
@@ -64,20 +97,17 @@ const Home = () => {
       </div>
     </div>
 
-    {/* Video section */}
     <div className="w-full h-screen overflow-hidden relative">
-      <video
-        ref={videoRef}
-        src="/vdo.mp4"
-        autoPlay
-        loop
-        playsInline
-        className="w-full h-full object-cover"
-      />
+      <div id="youtube-player" className="w-full h-full"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent bottom-0"></div>
+      <button 
+        onClick={toggleMute} 
+        className="absolute bottom-4 right-4 bg-white bg-opacity-50 p-2 rounded-full"
+      >
+        {isMuted ? '🔇' : '🔊'}
+      </button>
     </div>
 
-    {/* Black box section */}
     <div className="w-full h-[30vh] bg-black flex items-center justify-center relative">
       <p className="text-white text-4xl text-center w-[69%] leading-[3rem] absolute top-[-3.5rem] displayfont text-bold">
       We are a small venture building and providing services and assets to the public while working on projects in the domain of Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
