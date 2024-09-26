@@ -4,37 +4,42 @@ import {
   RiYoutubeLine,
   RiInstagramLine,
   RiLinkedinLine,
-  RiGithubLine,
+  RiTwitterLine,
+  RiDiscordLine,
  
 } from "react-icons/ri";
 
 export const socialData = [
   {
-    name: "YouTube",
-    link: "https://youtube.com",
+    name: "Instagram",
+    link: "https://www.instagram.com/metalcproductions/",
+    Icon: RiInstagramLine,
+  },  
+  {
+    name: "Twitter",
+    link: "https://x.com/MetAlcCommunity",
+    Icon: RiTwitterLine,
+  }, 
+  {
+    name: "Discord",
+    link: "https://discord.gg/uqZ9Z7Hawy",
+    Icon: RiDiscordLine,
+  },   
+  {
+    name: "Youtube",
+    link: "https://www.youtube.com/@MetAlcProductions",
     Icon: RiYoutubeLine,
   },
   {
-    name: "Instagram",
-    link: "https://instagram.com",
-    Icon: RiInstagramLine,
-  },
-  {
     name: "LinkedIn",
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/company/metalcproductions/",
     Icon: RiLinkedinLine,
-  },
-  
-  {
-    name: "Github",
-    link: "https://github.com/sanidhyy/modern-portfolio",
-    Icon: RiGithubLine,
   },
 ];
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div className="flex items-center justify-center gap-x-5 text-lg w-full">
       {socialData.map((social, i) => (
         <Link
           key={i}
