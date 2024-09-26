@@ -31,8 +31,7 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            MetAlc <br />
-            <span className="text-accent">Productions</span>
+            MetAlc Productions
           </motion.h1>
 
           <motion.p
@@ -42,8 +41,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Transforming Ideas Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            Metaverse Alchemists building Multiversal Realities!
           </motion.p>
 
           <motion.div
@@ -64,7 +62,26 @@ const Home = () => {
         />
 
       </div>
-      
+    </div>
+
+    {/* Video section */}
+    <div className="w-full h-screen overflow-hidden relative">
+      <video
+        ref={videoRef}
+        src="/vdo.mp4"
+        autoPlay
+        loop
+        playsInline
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent bottom-0"></div>
+    </div>
+
+    {/* Black box section */}
+    <div className="w-full h-[30vh] bg-black flex items-center justify-center relative">
+      <p className="text-white text-4xl text-center w-[69%] leading-[3rem] absolute top-[-3.5rem] displayfont text-bold">
+      We are a small venture building and providing services and assets to the public while working on projects in the domain of Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
+      </p>
       <Link href="/about" passHref legacyBehavior>
         <motion.a
           initial={{ opacity: 0, y: 20 }}
@@ -80,23 +97,6 @@ const Home = () => {
           />
         </motion.a>
       </Link>
-    </div>
-
-    {/* Video section */}
-    <div className="w-full h-screen overflow-hidden">
-      <video
-        ref={videoRef}
-        src="/vdo.mp4"
-        autoPlay
-        loop
-        playsInline
-        className="w-full h-full object-cover"
-      />
-    </div>
-
-    {/* New half-height black section */}
-    <div className="w-full h-[50vh] bg-black">
-      {/* Add content for this section here */}
     </div>
   </>
   );

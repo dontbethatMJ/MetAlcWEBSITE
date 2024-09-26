@@ -3,29 +3,28 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 // icons
-import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope,
-} from "react-icons/hi2";
-import { FaBloggerB } from "react-icons/fa6";
+import homeIcon from "../public/home.svg";
+import aboutIcon from "../public/about.svg";
+import servicesIcon from "../public/services.svg";
+import workIcon from "../public/projects.png";
+import testimonialsIcon from "../public/testimonials.png";
+import contactIcon from "../public/contactus.png";
+import blogIcon from "../public/newsletter.png";
+import artworksIcon from "../public/artworks.png";
 
 // Import hamburger icon
 import Image from "next/image";
 import hamburgerImg from "../public/hamburger.png";
 
-// nav data
 export const navData = [
-  { name: "home", path: "/", Icon: HiHome, text: "Home" },
-  { name: "about", path: "/about", Icon: HiUser, text: "About" },
-  { name: "services", path: "/services", Icon: HiRectangleGroup, text: "Services" },
-  { name: "work", path: "/work", Icon: HiViewColumns, text: "Work" },
-  { name: "testimonials", path: "/testimonials", Icon: HiChatBubbleBottomCenterText, text: "Testimonials" },
-  { name: "contact", path: "/contact", Icon: HiEnvelope, text: "Contact" },
-  { name: "Blog", path: "/blog", Icon: FaBloggerB, text: "Blog" },
+  { name: "home", path: "/", Icon: homeIcon, text: "Home" },
+  { name: "about", path: "/about", Icon: aboutIcon, text: "About" },
+  { name: "services", path: "/services", Icon: servicesIcon, text: "Services" },
+  { name: "projects", path: "/work", Icon: workIcon, text: "Projects" },
+  { name: "testimonials", path: "/testimonials", Icon: testimonialsIcon, text: "Testimonials" },
+  { name: "contactUs", path: "/contact", Icon: contactIcon, text: "Contact" },
+  { name: "newsletter", path: "/blog", Icon: blogIcon, text: "NewsLetter" },
+  { name: "artwork", path: "https://community.metalcproductions.com/artwork", Icon: artworksIcon, text: "Artwork" },
 ];
 
 const Nav = () => {
@@ -76,7 +75,7 @@ const Nav = () => {
               {expanded && (
                 <div className="mr-2 text-white text-sm xl:block hidden transition-all duration-1000">{link.text}</div>
               )}
-              <link.Icon aria-hidden />
+              <Image src={link.Icon} alt={link.name} width={20} height={20} aria-hidden />
             </div>
           </Link>
         ))}
