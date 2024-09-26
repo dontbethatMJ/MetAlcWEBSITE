@@ -11,29 +11,29 @@ import {
 
 export const socialData = [
   {
-    name: "Instagram",
-    link: "https://www.instagram.com/metalcproductions/",
-    Icon: RiInstagramLine,
-  },  
-  {
-    name: "Twitter",
-    link: "https://x.com/MetAlcCommunity",
-    Icon: RiTwitterLine,
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/company/metalcproductions/",
+    Icon: RiLinkedinLine,
   }, 
   {
     name: "Discord",
     link: "https://discord.gg/uqZ9Z7Hawy",
     Icon: RiDiscordLine,
-  },   
+  },  
+  {
+    name: "Twitter",
+    link: "https://x.com/MetAlcCommunity",
+    Icon: RiTwitterLine,
+  },  
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/metalcproductions/",
+    Icon: RiInstagramLine,
+  }, 
   {
     name: "Youtube",
     link: "https://www.youtube.com/@MetAlcProductions",
     Icon: RiYoutubeLine,
-  },
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/company/metalcproductions/",
-    Icon: RiLinkedinLine,
   },
 ];
 
