@@ -8,6 +8,7 @@ import Head from 'next/head';
 
 const Home = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const playerRef = useRef(null);
 
   useEffect(() => {
@@ -31,6 +32,7 @@ const Home = () => {
         events: {
           onReady: (event) => {
             event.target.setVolume(20);
+            setIsVideoLoaded(true);
           }
         }
       });
@@ -98,6 +100,13 @@ const Home = () => {
     </div>
 
     <div className="w-full h-screen overflow-hidden relative">
+      {!isVideoLoaded && (
+        <img 
+          src="/poster.jpg" 
+          alt="Video Poster" 
+          className="w-full h-full object-cover"
+        />
+      )}
       <div id="youtube-player" className="w-full h-full"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent bottom-0"></div>
       <button 
