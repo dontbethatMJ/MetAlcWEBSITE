@@ -27,7 +27,10 @@ const Home = () => {
           controls: 0,
           loop: 1,
           playlist: 'F-2lSWJ8Zxw',
-          mute: 1
+          mute: 1,
+          modestbranding: 1,  // Add this line
+          showinfo: 0,        // Add this line
+          rel: 0              // Add this line
         },
         events: {
           onReady: (event) => {
@@ -94,7 +97,7 @@ const Home = () => {
     <div className="w-full h-0 pb-[56.25%] relative overflow-hidden">
       {!isVideoLoaded && (
         <img 
-          src="/poster.jpg" 
+          src="/poster.png" 
           alt="Video Poster" 
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
