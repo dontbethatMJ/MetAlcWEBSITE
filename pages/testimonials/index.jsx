@@ -118,7 +118,7 @@ const Testimonials = () => {
       </div>
 
       {/* Down Arrow */}
-      <Link href="/contact" passHref>
+      <Link href="/contactus" passHref>
         <motion.a
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

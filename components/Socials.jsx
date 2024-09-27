@@ -38,7 +38,7 @@ export const socialData = [
 
 const Socials = () => {
   return (
-    <div className="flex items-center justify-center gap-x-5 text-lg w-full">
+    <div className="flex items-center justify-end gap-x-5 text-lg w-full">
       {socialData.map((social, i) => (
         <Link
           key={i}
@@ -46,18 +46,16 @@ const Socials = () => {
           href={social.link}
           target="_blank"
           rel="noreferrer noopener"
-          className={`${
-            social.name === "Github"
-              ? "bg-accent rounded-full p-[5px] hover:text-white"
-              : "hover:fill-accent"
-          } transition-all duration-300`}
+          className="group transition-all duration-300"
         >
-          <Image 
-            src={social.icon} 
-            alt={social.name} 
-            width={24}
-            height={24}  
-          />
+          <div className="transform transition-transform group-hover:-translate-y-0.5">
+            <Image 
+              src={social.icon} 
+              alt={social.name} 
+              width={24}
+              height={24}  
+            />
+          </div>
           <span className="sr-only">{social.name}</span>
         </Link>
       ))}
