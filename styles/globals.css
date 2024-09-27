@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 .translate-z-0 {
   transform: translateZ(0px);
 }
@@ -56,9 +54,4 @@
   .textarea {
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
-}
-
-displayfont {
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
 }
