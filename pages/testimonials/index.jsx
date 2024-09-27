@@ -30,7 +30,7 @@ const Testimonials = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-full bg-primary/30 py-32 text-center">
+    <div className="h-full bg-primary/30 text-center pt-32 overflow-hidden">
       <div className="container mx-auto h-full flex flex-col justify-center">
         <motion.h2
           variants={fadeIn("up", 0.2)}
@@ -55,7 +55,7 @@ const Testimonials = () => {
         {/* Testimonial Form */}
         <motion.form
           onSubmit={handleFormSubmit}
-          className="mt-8 flex justify-center items-center max-w-4xl mx-auto gap-6"
+          className="mt-8 flex justify-center items-center max-w-4xl mx-auto gap-6 pb-[20rem] md:pb-20"
           variants={fadeIn("up", 0.6)}
           initial="hidden"
           animate="show"
@@ -64,7 +64,7 @@ const Testimonials = () => {
           autoCapitalize="off"
           style={{ width: '60%' }}
         >
-          <div className="flex flex-col gap-6 w-1/3 items-center">
+          <div className="flex flex-col gap-2 md:w-1/3 w-full items-center">
             <input
               type="text"
               name="name"
@@ -119,11 +119,11 @@ const Testimonials = () => {
 
       {/* Down Arrow */}
       <Link href="/contactus" passHref>
-        <motion.a
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute md:bottom-8 bottom-16 left-1/2 transform -translate-x-1/2"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
@@ -131,7 +131,7 @@ const Testimonials = () => {
             alt="Down Arrow"
             className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
           />
-        </motion.a>
+        </motion.div>
       </Link>
     </div>
     </>

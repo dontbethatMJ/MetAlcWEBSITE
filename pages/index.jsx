@@ -118,7 +118,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute bottom-28 lg:bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-24 lg:bottom-8 left-1/2 transform -translate-x-1/2"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
