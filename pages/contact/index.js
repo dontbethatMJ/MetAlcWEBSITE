@@ -140,7 +140,7 @@ const Contact = () => {
         </div>
       </div>
       {/* Down Arrow */}
-      <Link href="/newsletter" passHref>
+      <Link href="/blog" passHref>
         <motion.a
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
