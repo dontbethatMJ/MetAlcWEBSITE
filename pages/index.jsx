@@ -30,7 +30,9 @@ const Home = () => {
           mute: 1,
           modestbranding: 1,  // Add this line
           showinfo: 0,        // Add this line
-          rel: 0              // Add this line
+          rel: 0,              // Add this line
+          iv_load_policy: 3,  // Add this line
+          fs: 0,              // Add this line
         },
         events: {
           onReady: (event) => {
