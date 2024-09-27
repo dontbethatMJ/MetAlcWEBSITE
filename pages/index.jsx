@@ -54,13 +54,6 @@ const Home = () => {
     <>
     <Head>
         <title>MetAlc Productions</title>
-        <style jsx global>{`
-          @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
-          
-          .displayfont {
-            font-family: 'Pixelify Sans', sans-serif;
-          }
-        `}</style>
     </Head>
     <Analytics/>
     <div className="bg-primary/60 h-full relative">
@@ -99,14 +92,6 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      {/* Remove or comment out the explosion background div */}
-      {/* <div className="w-[1280px] h-full absolute right-0 bottom-0">
-        <div
-          role="img"
-          className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
-          aria-hidden
-        />
-      </div> */}
     </div>
 
     <div className="w-full h-screen overflow-hidden relative">
@@ -128,7 +113,7 @@ const Home = () => {
     </div>
 
     <div className="w-full h-[30vh] bg-black flex items-center justify-center relative">
-      <p className="text-white text-[30px] text-center w-[69%] leading-[3rem] absolute top-[-3rem] displayfont text-bold">
+      <p className="text-[30px] text-center w-[69%] leading-[3rem] absolute top-[-3rem] text-white text-bold">
       We are a small venture building and providing services and assets to the public while working on projects in the domain of Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
       </p>
       <Link href="/about" passHref legacyBehavior>
