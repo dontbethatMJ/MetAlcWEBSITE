@@ -54,21 +54,11 @@ const Home = () => {
     <>
     <Head>
         <title>MetAlc Productions</title>
-        <style jsx global>{`
-          @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
-          
-          .displayfont {
-            font-family: 'Pixelify Sans', sans-serif;
-          }
-        `}</style>
     </Head>
     <Analytics/>
     <div className="bg-primary/60 h-full relative">
-      <div 
-        className="w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('/poster.webp')"}}
-      >
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto relative z-10">
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
@@ -99,20 +89,20 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      {/* Remove or comment out the explosion background div */}
-      {/* <div className="w-[1280px] h-full absolute right-0 bottom-0">
+      <div className="w-[1280px] h-full absolute right-0 bottom-0">
         <div
           role="img"
           className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
           aria-hidden
         />
-      </div> */}
+
+      </div>
     </div>
 
     <div className="w-full h-screen overflow-hidden relative">
       {!isVideoLoaded && (
         <img 
-          src="/poster.webp" 
+          src="/poster.jpg" 
           alt="Video Poster" 
           className="w-full h-full object-cover"
         />
@@ -121,14 +111,14 @@ const Home = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent bottom-0"></div>
       <button 
         onClick={toggleMute} 
-        className="absolute top-4 left-4 bg-white p-2 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors"
+        className="absolute bottom-4 right-4 bg-white bg-opacity-50 p-2 rounded-full"
       >
         {isMuted ? '🔇' : '🔊'}
       </button>
     </div>
 
     <div className="w-full h-[30vh] bg-black flex items-center justify-center relative">
-      <p className="text-white text-[30px] text-center w-[69%] leading-[3rem] absolute top-[-3rem] displayfont text-bold">
+      <p className="text-white text-4xl text-center w-[69%] leading-[3rem] absolute top-[-3.5rem] displayfont text-bold">
       We are a small venture building and providing services and assets to the public while working on projects in the domain of Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
       </p>
       <Link href="/about" passHref legacyBehavior>

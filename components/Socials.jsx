@@ -46,16 +46,18 @@ const Socials = () => {
           href={social.link}
           target="_blank"
           rel="noreferrer noopener"
-          className="group transition-all duration-300"
+          className={`${
+            social.name === "Github"
+              ? "bg-accent rounded-full p-[5px] hover:text-white"
+              : "hover:fill-accent"
+          } transition-all duration-300`}
         >
-          <div className="transform transition-transform group-hover:-translate-y-0.5">
-            <Image 
-              src={social.icon} 
-              alt={social.name} 
-              width={24}
-              height={24}  
-            />
-          </div>
+          <Image 
+            src={social.icon} 
+            alt={social.name} 
+            width={24}
+            height={24}  
+          />
           <span className="sr-only">{social.name}</span>
         </Link>
       ))}
