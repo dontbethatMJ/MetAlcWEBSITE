@@ -20,10 +20,10 @@ export const navData = [
   { name: "home", path: "/", Icon: homeIcon, text: "Home" },
   { name: "about", path: "/about", Icon: aboutIcon, text: "About" },
   { name: "services", path: "/services", Icon: servicesIcon, text: "Services" },
-  { name: "projects", path: "/work", Icon: workIcon, text: "Projects" },
+  { name: "projects", path: "/projects", Icon: workIcon, text: "Projects" },
   { name: "testimonials", path: "/testimonials", Icon: testimonialsIcon, text: "Testimonials" },
-  { name: "contactUs", path: "/contact", Icon: contactIcon, text: "Contact" },
-  { name: "newsletter", path: "/blog", Icon: blogIcon, text: "NewsLetter" },
+  { name: "contactUs", path: "/contactus", Icon: contactIcon, text: "Contact" },
+  { name: "newsletter", path: "/newsletter", Icon: blogIcon, text: "NewsLetter" },
   { name: "artwork", path: "https://community.metalcproductions.com/artwork", Icon: artworksIcon, text: "Artwork" },
 ];
 

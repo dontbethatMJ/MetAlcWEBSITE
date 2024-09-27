@@ -55,7 +55,7 @@ const Services = () => {
       </div>
       <Bulb />
       {/* Down Arrow */}
-      <Link href="/work" passHref>
+      <Link href="/projects" passHref>
         <motion.a
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
