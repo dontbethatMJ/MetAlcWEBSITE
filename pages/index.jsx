@@ -3,6 +3,7 @@ import { fadeIn } from "../variants";
 import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/react"
 import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 
 import Head from 'next/head';
 
@@ -10,14 +11,23 @@ const Home = () => {
   const [isMuted, setIsMuted] = useState(true);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const playerRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
-    const tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    const initializeYouTubePlayer = () => {
+      if (typeof window.YT === 'undefined') {
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    window.onYouTubeIframeAPIReady = () => {
+        window.onYouTubeIframeAPIReady = loadPlayer;
+      } else {
+        loadPlayer();
+      }
+    };
+
+    const loadPlayer = () => {
       playerRef.current = new window.YT.Player('youtube-player', {
         videoId: 'F-2lSWJ8Zxw',
         playerVars: {
@@ -36,16 +46,20 @@ const Home = () => {
           onReady: (event) => {
             event.target.setVolume(20);
             setIsVideoLoaded(true);
-          },
-          onStateChange: (event) => {
-            if (event.data === window.YT.PlayerState.PAUSED) {
-              event.target.playVideo();
-            }
           }
         }
       });
     };
-  }, []);
+
+    initializeYouTubePlayer();
+
+    // Cleanup function
+    return () => {
+      if (playerRef.current) {
+        playerRef.current.destroy();
+      }
+    };
+  }, [router.asPath]);
 
   const toggleMute = () => {
     if (playerRef.current) {
