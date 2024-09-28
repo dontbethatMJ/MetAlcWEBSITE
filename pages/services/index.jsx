@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import Bulb from "../../components/Bulb";
-import Circles from "../../components/Circles";
 import ServiceSlider from "../../components/ServiceSlider";
 import { fadeIn } from "../../variants";
 import Link from 'next/link';
@@ -14,8 +12,7 @@ const Services = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-screen bg-primary/30 py-36 flex items-center overflow-hidden relative">
-      <Circles />
+    <div className="h-screen bg-[url('/bg2.png')] bg-cover bg-center py-36 flex items-center overflow-hidden relative">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
@@ -53,7 +50,6 @@ const Services = () => {
           </motion.div>
         </div>
       </div>
-      <Bulb />
       {/* Down Arrow */}
       <Link href="/projects" passHref>
         <motion.a

@@ -43,56 +43,47 @@ const TestimonialSlider = () => {
         clickable: true,
       }}
       modules={[Navigation, Pagination]}
-      className="h-[400px]"
+      className="h-[300px]" 
     >
       {testimonialData.map((person, i) => (
         <SwiperSlide key={i}>
-          <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
-            {/* avatar, name, position */}
-            <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
+          <div className="flex flex-col items-center md:flex-row gap-x-4 h-full px-8"> 
+            <div className="w-full max-w-[200px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0"> 
               <div className="flex flex-col justify-center text-center">
-                {/* avatar */}
-                <div className="mb-2 mx-auto">
+                <div className="mb-1 mx-auto"> 
                   <Image
                     src={person.image}
-                    width={100}
-                    height={100}
+                    width={80} 
+                    height={80} 
                     alt={person.name}
-
                   />
                 </div>
 
-                {/* name */}
-                <div className="text-lg">{person.name}
-                <div className="ml-2">
-                  <div className="flex flex-row items-center">
+                <div className="text-base">{person.name} 
+                <div className="ml-1"> 
+                  <div className="flex flex-row items-center justify-center">
                   {[...Array(person.rating)].map((_, index) => (
-                    <FaStar key={index} className="text-yellow-400"/>
-                    
+                    <FaStar key={index} className="text-yellow-400 text-sm"/> 
                   ))}
                   </div>
                 </div>
                 </div>
 
-                {/* position */}
-                <div className="text-[12px] uppercase font-extralight tracking-widest">
+                <div className="text-[10px] uppercase font-extralight tracking-widest">
                   {person.position}
                 </div>
               </div>
             </div>
 
-            {/* quote & message */}
-            <div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
-              {/* quote icon */}
-              <div className="mb-4">
+            <div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[150px] relative xl:pl-10"> 
+              <div className="mb-2"> 
                 <FaQuoteLeft
-                  className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0"
+                  className="text-3xl xl:text-4xl text-white mx-auto md:mx-0"
                   aria-hidden
                 />
               </div>
 
-              {/* message */}
-              <div className="xl:text-lg text-center md:text-left">
+              <div className="text-sm xl:text-base text-center md:text-left">
                 {person.message}
               </div>
             </div>

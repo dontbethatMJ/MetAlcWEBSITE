@@ -12,13 +12,11 @@ const Home = () => {
   const playerRef = useRef(null);
 
   useEffect(() => {
-    // Load the YouTube Player API script
     const tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // Create YouTube player when API is ready
     window.onYouTubeIframeAPIReady = () => {
       playerRef.current = new window.YT.Player('youtube-player', {
         videoId: 'F-2lSWJ8Zxw',
@@ -28,16 +26,21 @@ const Home = () => {
           loop: 1,
           playlist: 'F-2lSWJ8Zxw',
           mute: 1,
-          modestbranding: 1,  // Add this line
-          showinfo: 0,        // Add this line
-          rel: 0,              // Add this line
-          iv_load_policy: 3,  // Add this line
-          fs: 0,              // Add this line
+          disablekb: 1,
+          fs: 0,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 0
         },
         events: {
           onReady: (event) => {
             event.target.setVolume(20);
             setIsVideoLoaded(true);
+          },
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.PAUSED) {
+              event.target.playVideo();
+            }
           }
         }
       });

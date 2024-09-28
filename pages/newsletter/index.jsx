@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
 import Link from 'next/link';
 import Head from 'next/head';
@@ -55,9 +54,12 @@ const Blog = () => {
     <Head>
       <title>MetAlc Productions</title>
     </Head>
-    <div className="h-dvh bg-primary/30 py-32 text-center xl:text-left flex flex-col overflow-hidden relative">
-      <Circles />
-      <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6 overflow-hidden">
+    <div className="h-dvh py-32 text-center xl:text-left flex flex-col overflow-hidden relative" style={{
+      backgroundImage: 'url("/bg2.png")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}>
+      <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -78,7 +80,7 @@ const Blog = () => {
                   initial="hidden"
                   animate="show"
                   exit="hidden"
-                  className="bg-[rgba(65,47,123,0.15)] rounded-lg px-6 py-8 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+                  className="bg-[#0d0d0d] rounded-lg px-6 py-8 group cursor-pointer hover:bg-[#252525] transition-all duration-300"
                 >
                   <div style={{ borderBottom: '1px solid #ccc', marginBottom: '20px', padding: '20px' }}>
                     <h2 style={{ color: '#f13024', marginBottom: '10px', fontWeight: 'bold' }}>{blog.title}</h2>

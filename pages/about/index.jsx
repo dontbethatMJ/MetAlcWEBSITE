@@ -3,27 +3,9 @@ import { useState } from "react";
 import CountUp from "react-countup";
 import TeamMember from "../TeamMember";
 import Link from 'next/link';
-import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
 import Head from 'next/head';
 
-
-//  data
-export const aboutData = [
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
-];
 
 const About = () => {
   const [index, setIndex] = useState(0);
@@ -33,10 +15,17 @@ const About = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="min-h-screen bg-primary/30 py-32 text-center xl:text-left flex flex-col overflow-hidden relative">
-      <Circles />
+    <div 
+      className="h-screen py-8 md:py-12 text-center xl:text-left flex flex-col overflow-hidden relative"
+      style={{
+        backgroundImage: "url('/bg2.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
 
-      <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6 overflow-y-hidden">
+      <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -44,7 +33,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2"
+            className="h2 text-2xl md:text-3xl lg:text-4xl mb-4"
           >
             Captivating <span className="text-accent">stories</span> birth
             magnificent designs.
@@ -53,11 +42,9 @@ const About = () => {
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[700px] mx-auto xl:mx-0 mb-4 xl:mb-6 px-2 xl:px-0 text-sm md:text-base"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collaborated on digital products for business and consumer use.
+            10 years ago, I began freelancing as a developer. Since then, I've done remote work for agencies, consulted for startups, and collaborated on digital products for business and consumer use.
           </motion.p>
 
           {/* counters */}
@@ -65,76 +52,67 @@ const About = () => {
             variants={fadeIn("right", 0.6)}
             initial="hidden"
             animate="show"
-            className="flex flex-col items-center md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="flex justify-between w-full max-w-3xl mx-auto mb-8 text-center"
           >
-            <div className="flex flex-1 md:gap-x-6">
-              {/* experience */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience.
-                </div>
+            {/* experience */}
+            <div className="flex-1 border-r border-gray-700 last:border-r-0">
+              <div className="text-4xl font-bold text-red-500 mb-2">
+                <CountUp start={0} end={10} duration={5} />
               </div>
-
-              {/* clients */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients.
-                </div>
+              <div className="text-xs uppercase tracking-wider">
+                Years of<br />experience.
               </div>
+            </div>
 
-              {/* projects */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects.
-                </div>
+            {/* clients */}
+            <div className="flex-1 border-r border-gray-700 last:border-r-0">
+              <div className="text-4xl font-bold text-red-500 mb-2">
+                <CountUp start={0} end={243} duration={5} />
               </div>
+              <div className="text-xs uppercase tracking-wider">
+                Satisfied<br />clients.
+              </div>
+            </div>
 
-              {/* awards */}
-              <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards.
-                </div>
+            {/* projects */}
+            <div className="flex-1 border-r border-gray-700 last:border-r-0">
+              <div className="text-4xl font-bold text-red-500 mb-2">
+                <CountUp start={0} end={631} duration={5} />
+              </div>
+              <div className="text-xs uppercase tracking-wider">
+                Finished<br />projects.
+              </div>
+            </div>
+
+            {/* awards */}
+            <div className="flex-1 border-r border-gray-700 last:border-r-0">
+              <div className="text-4xl font-bold text-red-500 mb-2">
+                <CountUp start={0} end={8} duration={5} />
+              </div>
+              <div className="text-xs uppercase tracking-wider">
+                Winning<br />awards.
               </div>
             </div>
           </motion.div>
 
           {/* meet the team section */}
-          <h2 className="text-2xl md:text-4xl xl:text-5xl font-bold mb-4 md:mb-8 text-center mt-[100px]">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-center">
             Meet the <span className="text-accent">Team</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-auto md:ml-[350px]">
+          <div className="flex justify-center gap-4">
             <TeamMember
-              key={0}
+              key={1}
               name="Mudit Jain"
-              description="Founder and CEO of company"
+              description="Founder and CEO"
               imageSrc="https://tse1.mm.bing.net/th?id=OIP.cxcqa9RvhGnRd8x3N2oBdgHaHn&pid=Api&P=0&h=180"
             />
             <TeamMember
-              key={0}
+              key={2}
               name="Ayush Pandey"
-              description="Founder and CEO of company"
+              description="Co-founder and CTO"
               imageSrc="https://tse1.mm.bing.net/th?id=OIP.cxcqa9RvhGnRd8x3N2oBdgHaHn&pid=Api&P=0&h=180"
             />
           </div>
-          <motion.div
-            variants={fadeIn("left", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden md:flex md:flex-col w-full md:xl:max-w-[48%] h-[480px] mx-auto  xl:ml-0"
-          ></motion.div>
         </div>
       </div>
 
@@ -144,13 +122,13 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-24 md:bottom-8 left-1/2 transform -translate-x-1/2"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
+            className="rotate-90 w-6 h-6 md:w-8 md:h-8 cursor-pointer hover:scale-110 transition-transform"
           />
         </motion.a>
       </Link>

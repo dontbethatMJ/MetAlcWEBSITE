@@ -4,46 +4,41 @@ import { fadeIn } from "../../variants";
 import { useState } from "react";
 import Link from 'next/link';
 import Head from 'next/head';
-
+import React from 'react';
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [result, setResult] = useState("");
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
+    setResult("Sending....");
 
-    fetch("https://formsubmit.co/metalcproductions@gmail.com", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
-        alert("Thank you. I will get back to you ASAP.");
-        // Clear form data after successful submission
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      })
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+    const formData = new FormData(event.target);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY_2);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setResult("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -51,7 +46,7 @@ const Contact = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-full bg-primary/30">
+    <div className="h-full bg-cover bg-center" style={{ backgroundImage: "url('/bg2.png')" }}>
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">
@@ -83,9 +78,7 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="Name"
-                className="input"
-                value={formData.name}
-                onChange={handleChange}
+                className="input border-white text-white placeholder-white"
                 disabled={isLoading}
                 required
               />
@@ -93,29 +86,15 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="E-mail"
-                className="input"
-                value={formData.email}
-                onChange={handleChange}
+                className="input border-white text-white placeholder-white"
                 disabled={isLoading}
                 required
               />
             </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              className="input"
-              value={formData.subject}
-              onChange={handleChange}
-              disabled={isLoading}
-              required
-            />
             <textarea
               name="message"
               placeholder="Message..."
-              className="textarea"
-              value={formData.message}
-              onChange={handleChange}
+              className="textarea border-white text-white placeholder-white"
               disabled={isLoading}
               required
             />
@@ -137,10 +116,11 @@ const Contact = () => {
               )}
             </button>
           </motion.form>
+          <span className="mt-4 text-center">{result}</span>
         </div>
       </div>
       {/* Down Arrow */}
-      <Link href="/newsletter" passHref>
+      <Link href="/newsletter" passHref legacyBehavior>
         <motion.a
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
