@@ -30,14 +30,14 @@ const Testimonials = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-full bg-primary/30 text-center pt-32 overflow-hidden">
-      <div className="container mx-auto h-full flex flex-col justify-center">
+    <div className="h-screen bg-[url('/bg2.png')] bg-cover bg-center text-center pt-16 flex flex-col">
+      <div className="container mx-auto flex-grow flex flex-col justify-center">
         <motion.h2
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 mb-8 xl:mb-0"
+          className="h2 mb-4"
         >
           What clients <span className="text-accent">say.</span>
         </motion.h2>
@@ -48,6 +48,7 @@ const Testimonials = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
+          className="flex-grow flex items-center"
         >
           <TestimonialSlider />
         </motion.div>
@@ -55,28 +56,28 @@ const Testimonials = () => {
         {/* Testimonial Form */}
         <motion.form
           onSubmit={handleFormSubmit}
-          className="mt-8 flex justify-center items-center max-w-4xl mx-auto gap-6 pb-[20rem] md:pb-20"
+          className="mt-4 flex justify-center items-stretch max-w-4xl mx-auto gap-6"
           variants={fadeIn("up", 0.6)}
           initial="hidden"
           animate="show"
           exit="hidden"
           autoComplete="off"
           autoCapitalize="off"
-          style={{ width: '60%' }}
+          style={{ width: '80%' }}
         >
-          <div className="flex flex-col gap-2 md:w-1/3 w-full items-center">
+          <div className="flex flex-col items-center gap-2 md:w-1/3 w-full">
             <input
               type="text"
               name="name"
               placeholder="Name"
-              className="input w-full"
+              className="input w-full text-white border-white placeholder-white"
               value={name}
               onChange={(e) => setName(e.target.value)}
               disabled={isLoading}
               required
             />
-            <div className="flex flex-col items-center mb-4 w-full">
-              <label className="block font-medium mb-2 text-[#585864]">
+            <div className="flex flex-col items-center mb-2 w-full">
+              <label className="block font-medium mb-1 text-white/80">
                 Rating (out of 5)
               </label>
               <div className="flex justify-center w-full">
@@ -96,11 +97,11 @@ const Testimonials = () => {
             </div>
             <button
               type="submit"
-              className="btn rounded-full border border-white/50 w-full max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+              className="btn rounded-full border border-white w-full max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group mt-auto"
               disabled={isLoading}
               aria-disabled={isLoading}
             >
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+              <span className="group-hover:-translate-y-[120%] border-white text-white group-hover:opacity-0 transition-all duration-500">
                 {isLoading ? "Submitting..." : "Submit"}
               </span>
             </button>
@@ -108,7 +109,7 @@ const Testimonials = () => {
           <textarea
             name="testimonial"
             placeholder="Submit your Testimonial here"
-            className="textarea w-2/3 h-full"
+            className="textarea w-2/3 border-white text-white placeholder-white"
             value={testimonial}
             onChange={(e) => setTestimonial(e.target.value)}
             disabled={isLoading}
@@ -123,17 +124,18 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute md:bottom-8 bottom-16 left-1/2 transform -translate-x-1/2"
+          className="mb-4"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />
         </motion.div>
       </Link>
     </div>
+
     </>
   );
 };
