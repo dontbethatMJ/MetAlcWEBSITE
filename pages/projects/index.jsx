@@ -51,6 +51,16 @@ const Work = () => {
             exit="hidden"
             className="w-full xl:max-w-[65%]"
           >
+            {/* New text added here */}
+            <motion.p
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="text-center mb-4 text-white"
+            >
+              Swipe right to see more
+            </motion.p>
             <WorkSlider />
           </motion.div>
         </div>

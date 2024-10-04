@@ -96,24 +96,35 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* meet the team section */}
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-center">
+          <motion.h2 
+            className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-center"
+            variants={fadeIn("right", 0.2)} 
+            initial="hidden" 
+            animate="show"
+            exit="hidden" 
+          >
             Meet the <span className="text-accent">Team</span>
-          </h2>
-          <div className="flex justify-center gap-4">
+          </motion.h2>
+          <motion.div 
+            className="flex justify-center gap-4"
+            variants={fadeIn("right", 0.2)} 
+            initial="hidden" 
+            animate="show" 
+            exit="hidden"
+          >
             <TeamMember
               key={1}
               name="Mudit Jain"
-              description="Founder and CEO"
-              imageSrc="https://tse1.mm.bing.net/th?id=OIP.cxcqa9RvhGnRd8x3N2oBdgHaHn&pid=Api&P=0&h=180"
+              role="Founder and CEO" 
+              imageSrc="/mj.jpg"
             />
             <TeamMember
               key={2}
               name="Ayush Pandey"
-              description="Co-founder and CTO"
-              imageSrc="https://tse1.mm.bing.net/th?id=OIP.cxcqa9RvhGnRd8x3N2oBdgHaHn&pid=Api&P=0&h=180"
+              role="Co-founder and CTO"
+              imageSrc="/ap.jpg"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 
