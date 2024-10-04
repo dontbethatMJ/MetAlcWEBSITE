@@ -1,20 +1,20 @@
-import { Sora } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 import Head from "next/head";
 
  import Header from "../components/Header";
  import Nav from "../components/Nav";
 
 // setup font
-const sora = Sora({
+const comfortaa = Comfortaa({
   subsets: ["latin"],
-  variable: "--font-sora",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-comfortaa",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const Layout = ({ children }) => {
   return (
     <main
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+      className={`page bg-site text-white bg-cover bg-no-repeat ${comfortaa.variable} font-comfortaa relative`}
     >
       {/* metadata */}
       <Head>

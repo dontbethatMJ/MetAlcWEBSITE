@@ -8,12 +8,14 @@ import React from 'react';
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [result, setResult] = useState("");
+  const [popupMessage, setPopupMessage] = useState(""); // New state for popup message
+  const [showPopup, setShowPopup] = useState(false); // New state for popup visibility
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
-    setResult("Sending....");
+    setPopupMessage("Sending...."); // Update to set popup message
+    // setShowPopup(false); // Remove popup visibility control
 
     const formData = new FormData(event.target);
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
@@ -27,17 +29,19 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Message Sent Successfully");
-        event.target.reset();
+        setPopupMessage("Message Sent Successfully"); // Success message
+        event.target.reset(); // Clear the input fields
       } else {
         console.log("Error", data);
-        setResult(data.message);
+        setPopupMessage("Message not sent, Try again later :("); // Error message
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      setResult("An error occurred. Please try again.");
+      setPopupMessage("Message not sent, Try again later :("); // Error message
     } finally {
       setIsLoading(false);
+      alert(popupMessage); // Show alert with the message
+      // setShowPopup(true); // Remove popup visibility control
     }
   };
 
@@ -128,9 +132,17 @@ const Contact = () => {
               )}
             </button>
           </motion.form>
-          <span className="mt-4 text-center">{result}</span>
         </div>
       </div>
+      {/* Popup for messages */}
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-4 rounded shadow-lg text-center" style={{ width: '200px', height: '300px' }}>
+            <p>{popupMessage}</p>
+            <button onClick={() => setShowPopup(false)} className="mt-2 btn">Close</button>
+          </div>
+        </div>
+      )}
       {/* Down Arrow */}
       <button
         onClick={() => window.location.href = '/newsletter'}

@@ -15,7 +15,7 @@ const Testimonials = () => {
   const handleSubmit = async (event) => { // Added handleSubmit function
     event.preventDefault();
     setIsLoading(true);
-    setResult("Sending....");
+    // Removed setResult
 
     const formData = new FormData(event.target);
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY); // Added access key
@@ -29,17 +29,17 @@ const Testimonials = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Thank You for ur Feedback");
+        alert("Thank You for your feedback :)"); // Show success alert
         setName("");
         setTestimonial("");
         setRating(0);
       } else {
         console.log("Error", data);
-        setResult(data.message);
+        alert("Try again later :("); // Show error alert
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      setResult("An error occurred. Please try again.");
+      alert("Try again later :("); // Show error alert
     } finally {
       setIsLoading(false);
     }
