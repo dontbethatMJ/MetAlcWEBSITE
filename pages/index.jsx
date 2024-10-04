@@ -61,6 +61,19 @@ const Home = () => {
     };
   }, [router.asPath]);
 
+  useEffect(() => {
+    // Reload the page when the route changes
+    const handleRouteChange = () => {
+      window.location.reload();
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   const toggleMute = () => {
     if (playerRef.current) {
       if (isMuted) {
@@ -132,24 +145,26 @@ const Home = () => {
     </div>
 
     <div className="w-full h-[40vh] lg:h-[30vh] bg-black flex items-center justify-center relative">
-      <p className="text-white text-[clamp(18px,3.9vw,30px)] text-center w-[69%] leading-[1.5] lg:top-[-3rem] top-[-2rem] absolute text-bold">
+      <p className="text-white text-[clamp(18px,3.9vw,30px)] text-center w-[69%] leading-[1.5] lg:top-[-3rem] top-[-2rem] absolute text-bold font-poppins">
       We are a small venture building and providing services and assets to the public while working on projects in the domain of Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
       </p>
-      <Link href="/about" passHref legacyBehavior>
-        <motion.a
+      <button
+        onClick={() => window.location.href = '/about'}
+        className="mb-4 hidden md:block"
+      >
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute bottom-24 lg:bottom-8 left-1/2 transform -translate-x-1/2"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />
-        </motion.a>
-      </Link>
+        </motion.div>
+      </button>
     </div>
   </>
   );

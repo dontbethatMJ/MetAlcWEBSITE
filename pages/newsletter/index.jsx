@@ -59,7 +59,7 @@ const Blog = () => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}>
-      <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6">
+      <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6" style={{ marginTop: '-20px' }}>
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -71,8 +71,8 @@ const Blog = () => {
           >
             Some EYE Catchy <span className="text-accent">Blogs</span>
           </motion.h2>
-          <div className="blog-list-container" style={{ fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: 'auto', height: '60vh', overflowY: 'scroll' }}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+          <div className="blog-list-container" style={{ fontFamily: 'Arial, sans-serif', maxWidth: '1000px', margin: 'auto', height: '60vh', overflowY: 'scroll' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {BlogData.map((blog) => (
                 <motion.div
                   key={blog.id}
@@ -99,21 +99,23 @@ const Blog = () => {
         </div>
       </div>
       {/* Down Arrow */}
-      <Link href="/" passHref>
-        <motion.a
+      <button
+        onClick={() => window.location.href = 'https://community.metalcproductions.com/artwork'}
+        className="mt-4 hidden md:block"
+      >
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />
-        </motion.a>
-      </Link>
+        </motion.div>
+      </button>
       <style jsx global>{`
         html, body {
           overflow: hidden;
@@ -129,12 +131,22 @@ const Blog = () => {
       `}</style>
       <style jsx>{`
         .blog-list-container {
-          -ms-overflow-style: none;  /* Internet Explorer 10+ */
-          scrollbar-width: none;  /* Firefox */
+          -ms-overflow-style: auto;  /* Internet Explorer 10+ */
+          scrollbar-width: thin;  /* Firefox */
+          border-right: 8px solid transparent; /* Add space for scrollbar */
         }
 
         .blog-list-container::-webkit-scrollbar {
-          display: none;  /* Safari and Chrome */
+          width: 8px;  /* Width of the scrollbar */
+        }
+
+        .blog-list-container::-webkit-scrollbar-thumb {
+          background-color: rgba(255, 255, 255, 0.5); /* Color of the scrollbar */
+          border-radius: 10px; /* Rounded corners for the scrollbar */
+        }
+
+        .blog-list-container::-webkit-scrollbar-track {
+          background: transparent; /* Background of the scrollbar track */
         }
       `}</style>
     </div>

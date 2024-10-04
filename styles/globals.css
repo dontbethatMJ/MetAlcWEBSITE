@@ -28,7 +28,7 @@
 
 @layer base {
   body {
-    @apply bg-secondary overflow-y-auto leading-relaxed;
+    @apply bg-black overflow-y-auto leading-relaxed;
   }
   .page {
     @apply w-full h-screen overflow-y-auto;
@@ -58,7 +58,20 @@
   }
 }
 
-displayfont {
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
+::-webkit-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #692d30 #0d0d0d;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #692d30;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #692d30;
 }

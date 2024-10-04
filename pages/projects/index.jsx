@@ -55,22 +55,7 @@ const Work = () => {
           </motion.div>
         </div>
       </div>
-      {/* Down Arrow */}
-      <Link href="/testimonials" passHref>
-        <motion.a
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
-        >
-          <img
-            src="/arrow.png"
-            alt="Down Arrow"
-            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
-          />
-        </motion.a>
-      </Link>
+      
       <style jsx global>{`
         html, body {
           overflow: hidden;
@@ -84,7 +69,25 @@ const Work = () => {
           flex-direction: column;
         }
       `}</style>
+      <button
+        onClick={() => window.location.href = '/testimonials'}
+        className="mb-4 hidden md:block fixed bottom-4 left-1/2 transform -translate-x-1/2"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
+        >
+          <img
+            src="/arrow.png"
+            alt="Down Arrow"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
+          />
+        </motion.div>
+      </button>
     </div>
+    
     </>
   );
 };
