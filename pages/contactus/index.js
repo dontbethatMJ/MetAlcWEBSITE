@@ -16,7 +16,7 @@ const Contact = () => {
     setResult("Sending....");
 
     const formData = new FormData(event.target);
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY_2);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -27,7 +27,7 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Form Submitted Successfully");
+        setResult("Message Sent Successfully");
         event.target.reset();
       } else {
         console.log("Error", data);
@@ -72,7 +72,9 @@ const Contact = () => {
             autoComplete="off"
             autoCapitalize="off"
           >
-            {/* input group */}
+            <input type="hidden" name="subject" value="Someone wants to connect" />
+            <input type="hidden" name="from_name" value="Contact Us - MetalcProductions"></input>
+
             <div className="flex gap-x-6 w-full">
               <input
                 type="text"
@@ -82,6 +84,16 @@ const Contact = () => {
                 disabled={isLoading}
                 required
               />
+              <input
+                type="number" // Changed to 'tel' for phone number
+                name="phone"
+                placeholder="Phone Number (with country code)"
+                className="input border-white text-white placeholder-white"
+                disabled={isLoading}
+                required
+              />
+            </div>
+            <div className="flex gap-x-6 w-full">
               <input
                 type="email"
                 name="email"
@@ -120,21 +132,23 @@ const Contact = () => {
         </div>
       </div>
       {/* Down Arrow */}
-      <Link href="/newsletter" passHref legacyBehavior>
-        <motion.a
+      <button
+        onClick={() => window.location.href = '/newsletter'}
+        className="mb-4 hidden md:block"
+      >
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />
-        </motion.a>
-      </Link>
+        </motion.div>
+      </button>
     </div>
     </>
   );

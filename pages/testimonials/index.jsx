@@ -10,19 +10,39 @@ const Testimonials = () => {
   const [testimonial, setTestimonial] = useState("");
   const [rating, setRating] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [result, setResult] = useState(""); // Added state for result message
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => { // Added handleSubmit function
+    event.preventDefault();
     setIsLoading(true);
-    // Handle form submission logic here, like sending data to backend or storing locally.
-    console.log("Name:", name);
-    console.log("Testimonial:", testimonial);
-    console.log("Rating:", rating);
-    // Clear form fields after submission
-    setName("");
-    setTestimonial("");
-    setRating(0);
-    setIsLoading(false);
+    setResult("Sending....");
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY); // Added access key
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", { // Fetch request to Web3Forms
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Thank You for ur Feedback");
+        setName("");
+        setTestimonial("");
+        setRating(0);
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setResult("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -55,7 +75,6 @@ const Testimonials = () => {
 
         {/* Testimonial Form */}
         <motion.form
-          onSubmit={handleFormSubmit}
           className="mt-4 flex justify-center items-stretch max-w-4xl mx-auto gap-6"
           variants={fadeIn("up", 0.6)}
           initial="hidden"
@@ -64,6 +83,7 @@ const Testimonials = () => {
           autoComplete="off"
           autoCapitalize="off"
           style={{ width: '80%' }}
+          onSubmit={handleSubmit} // Added onSubmit handler
         >
           <div className="flex flex-col items-center gap-2 md:w-1/3 w-full">
             <input
@@ -77,23 +97,18 @@ const Testimonials = () => {
               required
             />
             <div className="flex flex-col items-center mb-2 w-full">
-              <label className="block font-medium mb-1 text-white/80">
-                Rating (out of 5)
-              </label>
-              <div className="flex justify-center w-full">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <button
-                    key={star}
-                    type="button"
-                    onClick={() => setRating(star)}
-                    className={`text-2xl text-accent focus:outline-none ${
-                      star <= rating ? "text-accent" : "text-gray-300"
-                    }`}
-                  >
-                    ★
-                  </button>
-                ))}
-              </div>
+              <input
+                type="number"
+                name="rating"
+                min="0"
+                max="5"
+                value={rating === 0 ? "" : rating} // Removed default 0 value
+                onChange={(e) => setRating(Number(e.target.value))}
+                className="input w-3/4 text-white border-white placeholder-white text-center" // Added text-center for centering
+                placeholder="Rate Us out of 5"
+                disabled={isLoading}
+                required
+              />
             </div>
             <button
               type="submit"
@@ -115,16 +130,21 @@ const Testimonials = () => {
             disabled={isLoading}
             required
           />
+          <input type="hidden" name="subject" value="Someone gave a feedback" />
+          <input type="hidden" name="from_name" value="Testimonials - MetalcProductions" />
         </motion.form>
+        <span className="mt-4 text-center">{result}</span> {/* Added result message display */}
       </div>
 
       {/* Down Arrow */}
-      <Link href="/contactus" passHref>
+      <button
+        onClick={() => window.location.href = '/contactus'} // Changed to button with onClick
+        className="mb-4 hidden md:block" // Added hidden for small screens and block for medium and up
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="mb-4"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
@@ -133,7 +153,7 @@ const Testimonials = () => {
             className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />
         </motion.div>
-      </Link>
+      </button>
     </div>
 
     </>

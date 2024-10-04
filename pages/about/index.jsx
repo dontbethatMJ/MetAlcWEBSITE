@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import CountUp from "react-countup";
 import TeamMember from "../TeamMember";
-import Link from 'next/link';
+import { useRouter } from 'next/router'; // Import useRouter
 import { fadeIn } from "../../variants";
 import Head from 'next/head';
 
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const router = useRouter(); // Initialize router
 
   return (
     <>
@@ -117,21 +118,23 @@ const About = () => {
       </div>
 
       {/* Down Arrow */}
-      <Link href="/services" passHref>
-        <motion.a
+      <button
+        onClick={() => window.location.href = '/services'}
+        className="mb-4 hidden md:block"
+      >
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute bottom-24 md:bottom-8 left-1/2 transform -translate-x-1/2"
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="rotate-90 w-6 h-6 md:w-8 md:h-8 cursor-pointer hover:scale-110 transition-transform"
+            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />
-        </motion.a>
-      </Link>
+        </motion.div>
+      </button>
     </div>
     </>
   );
