@@ -99,7 +99,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 -ml-1 mb-2 text-[62px]"
           >
             MetAlc Productions
           </motion.h1>
@@ -109,7 +109,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-xl text-[#ffffffc8]"
           >
             Metaverse Alchemists building Multiversal Realities!
           </motion.p>
@@ -145,8 +145,10 @@ const Home = () => {
     </div>
 
     <div className="w-full h-[40vh] lg:h-[30vh] bg-black flex items-center justify-center relative">
-      <p className="text-white text-[clamp(18px,3.9vw,30px)] text-center w-[69%] leading-[1.5] lg:top-[-3rem] top-[-2rem] absolute text-bold font-poppins">
-      We are a small venture building and providing services and assets to the public while working on projects in the domain of Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
+      <p className="text-white text-[clamp(18px,3.9vw,30px)] text-center w-[75%] leading-[1.5] lg:top-[-3rem] top-[-2rem] absolute text-bold font-poppins">
+        <span className="text-bold">The Future is NOW!</span>
+        <br/>
+        We are a small venture trying to build a small space for ourselves in this big universe of metaverse that will truly lead the world in a few years . . .
       </p>
       <button
         onClick={() => window.location.href = '/about'}
@@ -161,7 +163,7 @@ const Home = () => {
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
+            className="rotate-90 w-8 h-8 mt-16 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />
         </motion.div>
       </button>

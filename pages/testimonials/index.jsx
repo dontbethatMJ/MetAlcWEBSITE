@@ -57,7 +57,7 @@ const Testimonials = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 mb-4"
+          className="h2 md:mt-16"
         >
           What clients <span className="text-accent">say.</span>
         </motion.h2>
@@ -68,14 +68,14 @@ const Testimonials = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex-grow flex items-center"
+          className="flex-grow flex items-center -mt-12"
         >
           <TestimonialSlider />
         </motion.div>
 
         {/* Testimonial Form */}
         <motion.form
-          className="mt-4 flex justify-center items-stretch max-w-4xl mx-auto gap-6"
+          className="flex justify-center items-stretch max-w-4xl mx-auto gap-6 mb-24 md:mb-8"
           variants={fadeIn("up", 0.6)}
           initial="hidden"
           animate="show"
@@ -139,7 +139,7 @@ const Testimonials = () => {
       {/* Down Arrow */}
       <button
         onClick={() => window.location.href = '/contactus'} // Changed to button with onClick
-        className="mb-4 hidden md:block" // Added hidden for small screens and block for medium and up
+        className="mb-6 hidden md:block" // Added hidden for small screens and block for medium and up
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}

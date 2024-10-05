@@ -5,29 +5,29 @@ import { RxArrowTopRight, RxCrop, RxPencil2, RxDesktop, RxReader, RxRocket } fro
 
 const serviceData = [
   {
-    Icon: RxCrop,
     title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "https://example.com/branding",  // Link
+    image: "/ser1.png",  // Image path
   },
   {
-    Icon: RxPencil2,
     title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "https://example.com/design",  // Link
+    image: "/ser1.png",  // Image path
   },
   {
-    Icon: RxDesktop,
     title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "https://example.com/development",  // Link
+    image: "/ser1.png",  // Image path
   },
   {
-    Icon: RxReader,
     title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "https://example.com/copywriting",  // Link
+    image: "/ser1.png",  // Image path
   },
   {
-    Icon: RxRocket,
     title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "https://example.com/seo",  // Link
+    image: "/ser1.png",  // Image path
   },
 ];
 
@@ -55,26 +55,27 @@ const ServiceSlider = () => {
     >
       {serviceData.map((item, i) => (
         <SwiperSlide key={i}>
-          <div className="bg-[#0d0d0d] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[#252525] transition-all duration-300">
-            {/* icon */}
-            <div className="text-4xl text-accent mb-4">
-              <item.Icon aria-hidden />
-            </div>
+          <a href={item.link} target="_blank" rel="noopener noreferrer"> 
+            <div className="bg-[#50889d] text-[#16232b] h-max rounded-lg px-0 py-0 flex flex-col group cursor-pointer hover:brightness-110 transition-all duration-300">
+              {/* image */}
+              <div className="h-[40%] overflow-hidden rounded-t-lg">
+                <img src={item.image} alt={item.title} className="w-full h-[140px] md:h-full object-cover" /> 
+              </div>
 
-            {/* title & description */}
-            <div className="mb-8">
-              <div className="mb-2 text-lg">{item.title}</div>
-              <p className="max-w-[350px] leading-normal">{item.description}</p>
-            </div>
+              {/* title and arrow container */}
+              <div className="flex flex-col justify-between h-[60%] m-4 text-lg">
+                <div className="mb-2">{item.title}</div> 
 
-            {/* arrow */}
-            <div className="text-3xl">
-              <RxArrowTopRight
-                className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300"
-                aria-hidden
-              />
+                {/* arrow */}
+                <div className="flex items-center md:mt-12 text-3xl">
+                  <RxArrowTopRight
+                    className="group-hover:rotate-45 transition-all duration-300"
+                    aria-hidden
+                  />
+                </div>
+              </div>
             </div>
-          </div>
+          </a>
         </SwiperSlide>
       ))}
     </Swiper>

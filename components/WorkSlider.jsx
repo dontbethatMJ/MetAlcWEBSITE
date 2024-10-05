@@ -86,11 +86,12 @@ const WorkSlider = () => {
                     alt={image.title}
                     width={500}
                     height={300}
+                    className="transition-all duration-300 group-hover:blur-sm"
                   />
 
                   {/* overlay gradient */}
                   <div
-                    className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"
+                    className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-all duration-700"
                     aria-hidden
                   />
 

@@ -69,9 +69,9 @@ const Blog = () => {
             exit="hidden"
             className="h2"
           >
-            Some EYE Catchy <span className="text-accent">Blogs</span>
+            News and Articles
           </motion.h2>
-          <div className="blog-list-container" style={{ fontFamily: 'Arial, sans-serif', maxWidth: '1000px', margin: 'auto', height: '60vh', overflowY: 'scroll' }}>
+          <div className="blog-list-container font-comfortaa max-w-[1000px] mx-auto h-[60vh] overflow-y-scroll">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {BlogData.map((blog) => (
                 <motion.div
@@ -80,17 +80,17 @@ const Blog = () => {
                   initial="hidden"
                   animate="show"
                   exit="hidden"
-                  className="bg-[#0d0d0d] rounded-lg px-6 py-8 group cursor-pointer hover:bg-[#252525] transition-all duration-300"
+                  className="bg-[#22272a] text-[#eef0f1] rounded-lg px-6 py-8 group cursor-pointer hover:bg-[#c8dae0]" // Ensure group class is present
                 >
-                  <div style={{ borderBottom: '1px solid #ccc', marginBottom: '20px', padding: '20px' }}>
-                    <h2 style={{ color: '#f13024', marginBottom: '10px', fontWeight: 'bold' }}>{blog.title}</h2>
-                    <p style={{ color: '#F8F8F8', marginBottom: '5px' }}>
+                  <div className="border-b border-[#eef0f1] group-hover:border-[#16232b] mb-5 p-5"> {/* Changed to use Tailwind classes */}
+                    <h2 className="text-xl text-accent" style={{ marginBottom: '10px', fontWeight: 'bold' }}>{blog.title}</h2>
+                    <p className="text-[#eef0f1] group-hover:text-[#16232b]" style={{ marginBottom: '5px' }}>
                       <strong>Author:</strong> {blog.author}
                     </p>
-                    <p style={{ color: '#F8F8F8', marginBottom: '5px' }}>
+                    <p className="text-[#eef0f1] group-hover:text-[#16232b]" style={{ marginBottom: '5px' }}>
                       <strong>Date:</strong> {blog.date}
                     </p>
-                    <p style={{ color: '#EEEEEE' }}>{blog.content}</p>
+                    <p className="text-[#eef0f1] group-hover:text-[#16232b]" style={{ marginBottom: '5px' }}>{blog.content}</p> {/* Added group-hover class */}
                   </div>
                 </motion.div>
               ))}

@@ -22,9 +22,9 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-8"
+              className="h2 xl:mt-8 md:text-5xl text-3xl"
             >
-              My services <span className="text-accent">.</span>
+              Our services <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -33,8 +33,8 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              We plan to cover not just one sector of gaming and xr industry, we aim to be a master of all trades namely, Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
+
             </motion.p>
           </div>
 
