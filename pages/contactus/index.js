@@ -60,10 +60,19 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-12"
+            className="h2 text-center -mb-0"
           >
             Let's <span className="text-accent">connect.</span>
           </motion.h2>
+          <motion.p
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="text-center mb-12"
+          >
+            <a href="mailto:support@metalcproductions.com" className="text-[#ffffffc8]">support@metalcproductions.com</a>
+          </motion.p>
 
           {/* form */}
           <motion.form
