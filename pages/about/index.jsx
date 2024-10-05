@@ -115,31 +115,32 @@ const About = () => {
               key={2}
               name="Ayush Pandey"
               role="Co-founder"
-              description="3D Artist"
+              description="Technical Artist"
               imageSrc="/ap.jpg"
             />
           </motion.div>
         </div>
       </div>
-
-      {/* Down Arrow */}
+    </div>
+    {/* Down Arrow */}
+    <div className="flex justify-center mb-4" style={{ marginBottom: '1rem' }}>
       <button
-        onClick={() => window.location.href = '/services'}
-        className="mb-4 hidden md:block"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
+          onClick={() => window.location.href = '/services'}
+          className="hidden md:block"
         >
-          <img
-            src="/arrow.png"
-            alt="Down Arrow"
-            className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto -mt-8"
-          />
-        </motion.div>
-      </button>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
+          >
+            <img
+              src="/arrow.png"
+              alt="Down Arrow"
+              className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto -mt-16"
+            />
+          </motion.div>
+        </button>
     </div>
     </>
   );
