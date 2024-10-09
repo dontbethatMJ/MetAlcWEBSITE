@@ -155,7 +155,7 @@ const Contact = () => {
       {/* Down Arrow */}
       <button
         onClick={() => window.location.href = '/newsletter'}
-        className="mb-4 hidden md:block"
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden md:block" // Centered and hidden on small devices
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}

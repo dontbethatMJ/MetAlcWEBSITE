@@ -36,9 +36,9 @@ export const socialData = [
   },
 ];
 
-const Socials = () => {
+const Socials = ({ justifyCenter }) => { 
   return (
-    <div className="flex items-center justify-center md:justify-end gap-x-5 text-lg w-full">
+    <div className={`flex items-center justify-center ${justifyCenter ? 'md:justify-center' : 'md:justify-end'} gap-x-5 text-lg w-full`}>
       {socialData.map((social, i) => (
         <Link
           key={i}
