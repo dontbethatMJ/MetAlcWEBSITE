@@ -104,7 +104,7 @@ const Testimonials = () => {
                 max="5"
                 value={rating === 0 ? "" : rating} // Removed default 0 value
                 onChange={(e) => setRating(Number(e.target.value))}
-                className="input w-3/4 text-white border-white placeholder-white text-center" // Added text-center for centering
+                className="input w-full text-white border-white placeholder-white text-center" // Added text-center for centering
                 placeholder="Rate Us out of 5"
                 disabled={isLoading}
                 required
@@ -133,13 +133,13 @@ const Testimonials = () => {
           <input type="hidden" name="subject" value="Someone gave a feedback" />
           <input type="hidden" name="from_name" value="Testimonials - MetalcProductions" />
         </motion.form>
-        <span className="mt-4 text-center">{result}</span> {/* Added result message display */}
+        <span className="mt-4 text-center">{result}</span>
       </div>
 
       {/* Down Arrow */}
       <button
-        onClick={() => window.location.href = '/contactus'} // Changed to button with onClick
-        className="mb-6 hidden md:block" // Added hidden for small screens and block for medium and up
+        onClick={() => window.location.href = '/contactus'}
+        className="mb-6 hidden md:block" 
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}

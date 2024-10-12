@@ -17,7 +17,7 @@ const About = () => {
         <title>MetAlc Productions</title>
     </Head>
     <div 
-      className="h-screen py-8 md:py-12 text-center xl:text-left flex flex-col overflow-hidden relative"
+      className="h-screen py-8 md:py-12 text-center xl:text-left flex flex-col relative" 
       style={{
         backgroundImage: "url('/bg2.png')",
         backgroundSize: 'cover',
@@ -89,7 +89,7 @@ const About = () => {
           </motion.div>
 
           <motion.h2 
-            className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-center md:mt-6"
+            className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-center md:mt-16"
             variants={fadeIn("right", 0.2)} 
             initial="hidden" 
             animate="show"
@@ -97,37 +97,90 @@ const About = () => {
           >
             Meet the <span className="text-accent">Team</span>
           </motion.h2>
-          <motion.div 
-            className="flex justify-center gap-4"
-            variants={fadeIn("right", 0.2)} 
-            initial="hidden" 
-            animate="show" 
-            exit="hidden" // Added exit animation
-          >
-            <TeamMember
-              key={1}
-              name="Mudit Jain"
-              role="Founder" 
-              description="XR Developer"
-              imageSrc="/mj.jpg"
-            />
-            <TeamMember
-              key={2}
-              name="Ayush Pandey"
-              role="Co-founder"
-              description="Technical Artist"
-              imageSrc="/ap.jpg"
-            />
-          </motion.div>
+          <div className="flex flex-col"> {/* Parent div to wrap both rows */}
+            <motion.div 
+              className="flex justify-center gap-4 mb-4 mt-4" // Added margin for spacing
+              variants={fadeIn("right", 0.2)} 
+              initial="hidden" 
+              animate="show" 
+              exit="hidden" 
+            >
+              <TeamMember
+                key={1}
+                name="Mudit Jain"
+                role="Founder" 
+                description="XR Developer"
+                imageSrc="/mj.jpg"
+                link="https://example.com/mudit" // Added link
+              />
+              <TeamMember
+                key={2}
+                name="Ayush Pandey"
+                role="Co-founder"
+                description="Technical Artist"
+                imageSrc="/ap.jpg"
+                link="https://example.com/ayush" // Added link
+              />
+            </motion.div>
+
+            {/* <motion.div 
+              className="flex flex-wrap justify-center gap-4" // Added flex-wrap for responsiveness
+              variants={fadeIn("right", 0.2)} 
+              initial="hidden" 
+              animate="show" 
+              exit="hidden" 
+            >
+              <div className="flex-1 min-w-[150px] max-w-[200px]"> 
+                <TeamMember
+                  key={3}
+                  name="John Doe"
+                  role="Developer"
+                  description="Game Developer"
+                  imageSrc="/mj.jpg"
+                  link="https://example.com/john" // Added link
+                />
+              </div>
+              <div className="flex-1 min-w-[150px] max-w-[200px]">
+                <TeamMember
+                  key={4}
+                  name="Jane Smith"
+                  role="Designer"
+                  description="UI/UX Designer"
+                  imageSrc="/mj.jpg"
+                  link="https://example.com/jane" // Added link
+                />
+              </div>
+              <div className="flex-1 min-w-[150px] max-w-[200px]">
+                <TeamMember
+                  key={5}
+                  name="Alice Johnson"
+                  role="Artist"
+                  description="3D Artist"
+                  imageSrc="/mj.jpg"
+                  link="https://example.com/alice" // Added link
+                />
+              </div>
+              <div className="flex-1 min-w-[150px] max-w-[200px]">
+                <TeamMember
+                  key={6}
+                  name="Bob Brown"
+                  role="Producer"
+                  description="Project Producer"
+                  imageSrc="/mj.jpg"
+                  link="https://example.com/bob" // Added link
+                />
+              </div>
+            </motion.div> */}
+            
+          </div>
         </div>
       </div>
-    </div>
-    {/* Down Arrow */}
-    <div className="flex justify-center mb-4" style={{ marginBottom: '1rem' }}>
-      <button
-          onClick={() => window.location.href = '/services'}
-          className="hidden md:block"
-        >
+      
+      <div className="flex justify-center mb-4" style={{ marginBottom: '1rem' }}>
+        <button
+            onClick={() => window.location.href = '/services'}
+            className="hidden md:block"
+          >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,6 +194,7 @@ const About = () => {
             />
           </motion.div>
         </button>
+      </div>
     </div>
     </>
   );
