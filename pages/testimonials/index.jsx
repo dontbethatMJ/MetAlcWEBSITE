@@ -56,7 +56,6 @@ const Testimonials = () => {
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           animate="show"
-          exit="hidden"
           className="h2 md:mt-16"
         >
           What clients <span className="text-accent">say.</span>
@@ -67,7 +66,6 @@ const Testimonials = () => {
           variants={fadeIn("up", 0.4)}
           initial="hidden"
           animate="show"
-          exit="hidden"
           className="flex-grow flex items-center -mt-12"
         >
           <TestimonialSlider />
@@ -79,7 +77,6 @@ const Testimonials = () => {
           variants={fadeIn("up", 0.6)}
           initial="hidden"
           animate="show"
-          exit="hidden"
           autoComplete="off"
           autoCapitalize="off"
           style={{ width: '80%' }}

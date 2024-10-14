@@ -66,7 +66,6 @@ const Blog = () => {
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
-            exit="hidden"
             className="h2"
           >
             News and Articles
@@ -79,7 +78,6 @@ const Blog = () => {
                   variants={fadeIn("up", 0.4)}
                   initial="hidden"
                   animate="show"
-                  exit="hidden"
                   className="bg-[#22272a] text-[#eef0f1] rounded-lg px-6 py-8 group cursor-pointer hover:bg-[#c8dae0]" // Ensure group class is present
                 >
                   <div className="border-b border-[#eef0f1] group-hover:border-[#16232b] mb-5 p-5"> {/* Changed to use Tailwind classes */}

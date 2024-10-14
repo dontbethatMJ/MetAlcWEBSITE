@@ -98,7 +98,6 @@ const Home = () => {
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
-            exit="hidden"
             className="h1 -ml-1 mb-2 text-[62px]"
           >
             MetAlc Productions
@@ -108,7 +107,6 @@ const Home = () => {
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
-            exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-xl text-[#ffffffc8]"
           >
             Metaverse Alchemists building Multiversal Realities!
@@ -118,7 +116,6 @@ const Home = () => {
             variants={fadeIn("down", 0.4)}
             initial="hidden"
             animate="show"
-            exit="hidden"
             className="hidden xl:flex"
           >
           </motion.div>

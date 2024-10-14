@@ -36,8 +36,7 @@ export const socialData = [
   },
 ];
 
-const Socials = ({ isArtworkPage }) => { 
-  // Hide the component if on the artwork page
+const Socials = ({ isArtworkPage }) => {
   if (isArtworkPage) return null; 
 
   return (

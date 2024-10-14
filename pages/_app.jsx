@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         <title>MetAlc Productions</title>
     </Head>
     <Layout>
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.div key={router.route} className="h-full">
           <Component {...pageProps} />
         </motion.div>
