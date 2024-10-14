@@ -33,7 +33,6 @@ const About = () => {
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
-            exit="hidden" // Added exit animation
             className="h2 text-2xl md:text-3xl lg:text-4xl mb-4 md:mt-8"
           >
             When we started <span className="text-accent">. . .</span>
@@ -43,7 +42,6 @@ const About = () => {
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
-            exit="hidden" // Added exit animation
             className="max-w-[900px] mx-auto xl:mx-0 mb-4 xl:mb-6 px-2 xl:px-0 text-sm md:text-base text-[#ffffffc8]"
           >
             We were just us two beginners who had just stepped into game development because we love gaming. In the past 3 years, we met a lot of people, founded a team, built many projects, and held workshops and seminars. We work in the domains of Game Dev, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc for consumers, brands and agencies.
@@ -54,7 +52,6 @@ const About = () => {
             variants={fadeIn("right", 0.6)}
             initial="hidden"
             animate="show"
-            exit="hidden"
             className="flex justify-between w-full max-w-3xl mx-auto mb-8 md:mt-6 text-center"
           >
             {/* experience */}
@@ -93,7 +90,6 @@ const About = () => {
             variants={fadeIn("right", 0.2)} 
             initial="hidden" 
             animate="show"
-            exit="hidden" // Added exit animation
           >
             Meet the <span className="text-accent">Team</span>
           </motion.h2>
@@ -103,7 +99,6 @@ const About = () => {
               variants={fadeIn("right", 0.2)} 
               initial="hidden" 
               animate="show" 
-              exit="hidden" 
             >
               <TeamMember
                 key={1}
@@ -128,7 +123,6 @@ const About = () => {
               variants={fadeIn("right", 0.2)} 
               initial="hidden" 
               animate="show" 
-              exit="hidden" 
             >
               <div className="flex-1 min-w-[150px] max-w-[200px]"> 
                 <TeamMember

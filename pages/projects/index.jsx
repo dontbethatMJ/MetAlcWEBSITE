@@ -26,7 +26,6 @@ const Work = () => {
               variants={fadeIn("up", 0.2)}
               initial="hidden"
               animate="show"
-              exit="hidden"
               className="h2 xl:mt-12 text-3xl md:text-5xl md:ml-[1.5rem]"
             >
               Our Projects <span className="text-accent">.</span>
@@ -35,7 +34,6 @@ const Work = () => {
               variants={fadeIn("up", 0.4)}
               initial="hidden"
               animate="show"
-              exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-center"
             >
               (Hover on the boxes to know more)
@@ -47,7 +45,6 @@ const Work = () => {
             variants={fadeIn("down", 0.6)}
             initial="hidden"
             animate="show"
-            exit="hidden"
             className="w-full xl:max-w-[65%]"
           >
             {/* New text added here */}
@@ -55,7 +52,6 @@ const Work = () => {
               variants={fadeIn("up", 0.4)}
               initial="hidden"
               animate="show"
-              exit="hidden"
               className="text-center mb-4 text-white"
             >
               Swipe right to see more

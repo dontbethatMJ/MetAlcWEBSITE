@@ -21,7 +21,6 @@ const Services = () => {
               variants={fadeIn("up", 0.2)}
               initial="hidden"
               animate="show"
-              exit="hidden"
               className="h2 xl:mt-8 md:text-5xl text-3xl"
             >
               Our services <span className="text-accent">.</span>
@@ -30,7 +29,6 @@ const Services = () => {
               variants={fadeIn("up", 0.4)}
               initial="hidden"
               animate="show"
-              exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
               We plan to cover not just one sector of gaming and xr industry, we aim to be a master of all trades namely, Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
@@ -43,7 +41,6 @@ const Services = () => {
             variants={fadeIn("down", 0.6)}
             initial="hidden"
             animate="show"
-            exit="hidden"
             className="w-full xl:max-w-[65%]"
           >
             {/* New text added here */}
@@ -51,7 +48,6 @@ const Services = () => {
               variants={fadeIn("up", 0.4)}
               initial="hidden"
               animate="show"
-              exit="hidden"
               className="text-center mb-4 text-white"
             >
               Swipe right to see more
