@@ -37,8 +37,11 @@ export const socialData = [
 ];
 
 const Socials = ({ isArtworkPage }) => { 
+  // Hide the component if on the artwork page
+  if (isArtworkPage) return null; 
+
   return (
-    <div className={`flex items-center ${isArtworkPage ? 'display-hidden' : 'display-block'} md:justify-end gap-x-5 text-lg w-full`}>
+    <div className="flex items-center gap-x-5 text-lg w-full">
       {socialData.map((social, i) => (
         <Link
           key={i}
