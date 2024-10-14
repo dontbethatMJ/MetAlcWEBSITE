@@ -50,7 +50,7 @@ const Testimonials = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-screen bg-[url('/bg2.png')] bg-cover bg-center text-center pt-16 flex flex-col">
+    <div className="h-screen bg-[url('/bg23.png')] bg-cover bg-center text-center pt-16 flex flex-col">
       <div className="container mx-auto flex-grow flex flex-col justify-center">
         <motion.h2
           variants={fadeIn("up", 0.2)}

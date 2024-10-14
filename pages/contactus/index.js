@@ -50,7 +50,7 @@ const Contact = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-full bg-cover bg-center" style={{ backgroundImage: "url('/bg2.png')" }}>
+    <div className="h-full bg-cover bg-center" style={{ backgroundImage: "url('/bg23.png')" }}>
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">

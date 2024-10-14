@@ -55,7 +55,7 @@ const Blog = () => {
       <title>MetAlc Productions</title>
     </Head>
     <div className="h-dvh py-32 text-center xl:text-left flex flex-col overflow-hidden relative" style={{
-      backgroundImage: 'url("/bg2.png")',
+      backgroundImage: 'url("/bg23.png")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}>
