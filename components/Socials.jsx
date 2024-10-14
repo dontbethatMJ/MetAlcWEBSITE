@@ -36,9 +36,9 @@ export const socialData = [
   },
 ];
 
-const Socials = ({ justifyCenter }) => { 
+const Socials = ({ isArtworkPage }) => { 
   return (
-    <div className={`flex items-center justify-center ${justifyCenter ? 'md:justify-center' : 'md:justify-end'} gap-x-5 text-lg w-full`}>
+    <div className={`flex items-center ${isArtworkPage ? 'display-hidden' : 'display-block'} md:justify-end gap-x-5 text-lg w-full`}>
       {socialData.map((social, i) => (
         <Link
           key={i}
