@@ -56,7 +56,7 @@ const ServiceSlider = () => {
       {serviceData.map((item, i) => (
         <SwiperSlide key={i}>
           <a href={item.link} target="_blank" rel="noopener noreferrer"> 
-            <div className="bg-[#50889d] text-[#16232b] h-max rounded-lg px-0 py-0 flex flex-col group cursor-pointer hover:brightness-110 transition-all duration-300">
+            <div className="bg-[#6fc3ce] text-[#16232b] h-max rounded-lg px-0 py-0 flex flex-col group cursor-pointer hover:brightness-110 transition-all duration-300">
               {/* image */}
               <div className="h-[40%] overflow-hidden rounded-t-lg">
                 <img src={item.image} alt={item.title} className="w-full h-[140px] md:h-full object-cover" /> 

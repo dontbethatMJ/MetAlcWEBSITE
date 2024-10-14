@@ -35,7 +35,7 @@ const About = () => {
             animate="show"
             className="h2 text-2xl md:text-3xl lg:text-4xl mb-4 md:mt-8"
           >
-            When we started <span className="text-accent">. . .</span>
+            When we started <span className="text-[#6fc3ce]">. . .</span>
 
           </motion.h2>
           <motion.p
@@ -56,7 +56,7 @@ const About = () => {
           >
             {/* experience */}
             <div className="flex-1 border-r border-gray-700 last:border-r-0">
-              <div className="text-4xl font-bold text-accent mb-2">
+              <div className="text-4xl font-bold text-[#6fc3ce] mb-2">
                 <CountUp start={0} end={2} duration={5} />+
               </div>
               <div className="text-xs uppercase tracking-wider">
@@ -66,7 +66,7 @@ const About = () => {
 
             {/* clients */}
             <div className="flex-1 border-r border-gray-700 last:border-r-0">
-              <div className="text-4xl font-bold text-accent mb-2">
+              <div className="text-4xl font-bold text-[#6fc3ce] mb-2">
                 <CountUp start={0} end={5} duration={5} />+
               </div>
               <div className="text-xs uppercase tracking-wider">
@@ -76,7 +76,7 @@ const About = () => {
 
             {/* projects */}
             <div className="flex-1 border-r border-gray-700 last:border-r-0">
-              <div className="text-4xl font-bold text-accent mb-2">
+              <div className="text-4xl font-bold text-[#6fc3ce] mb-2">
                 <CountUp start={0} end={10} duration={5} />+
               </div>
               <div className="text-xs uppercase tracking-wider">
@@ -91,7 +91,7 @@ const About = () => {
             initial="hidden" 
             animate="show"
           >
-            Meet the <span className="text-accent">Team</span>
+            Meet the <span className="text-[#6fc3ce]">Team</span>
           </motion.h2>
           <div className="flex flex-col"> {/* Parent div to wrap both rows */}
             <motion.div 

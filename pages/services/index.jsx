@@ -29,9 +29,9 @@ const Services = () => {
               variants={fadeIn("up", 0.4)}
               initial="hidden"
               animate="show"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-[#ffffffe0]"
             >
-              We plan to cover not just one sector of gaming and xr industry, we aim to be a master of all trades namely, Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, etc.
+              We plan to cover not just one sector of gaming and xr industry, we aim to be a master of all trades namely, Gaming, XR, Virtual Production, CGI VFX, 3D Product Visualization, Web Development (frontend) and App Development.
 
             </motion.p>
           </div>
