@@ -13,7 +13,7 @@ const Work = () => {
     <div 
       className="h-dvh py-36 flex items-center overflow-hidden relative"
       style={{
-        backgroundImage: 'url("/bg2.png")',
+        backgroundImage: 'url("/bg23.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

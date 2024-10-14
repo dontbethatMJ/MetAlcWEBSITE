@@ -19,11 +19,11 @@ const About = () => {
     <div 
       className="h-screen py-8 md:py-12 text-center xl:text-left flex flex-col relative" 
       style={{
-        backgroundImage: "url('/bg2.png')",
+        backgroundImage: "url('/bg23.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-      }}
+        }}
     >
 
       <div className="flex-1 container mx-auto flex flex-col items-center xl:flex-row gap-x-6">
@@ -86,7 +86,7 @@ const About = () => {
           </motion.div>
 
           <motion.h2 
-            className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-center md:mt-16"
+            className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-center"
             variants={fadeIn("right", 0.2)} 
             initial="hidden" 
             animate="show"

@@ -12,7 +12,7 @@ const Services = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-screen bg-[url('/bg2.png')] bg-cover bg-center py-36 flex items-center overflow-hidden relative">
+    <div className="h-screen bg-[url('/bg23.png')] bg-cover bg-center py-36 flex items-center overflow-hidden relative">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
