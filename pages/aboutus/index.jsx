@@ -108,7 +108,7 @@ const About = () => {
                     key={3}
                     name="Mudit Jain"
                     role="Founder"
-                    description="XR Developer"
+                    description="XR Designer"
                     imageSrc="/mj.jpg"
                   />
                 </div>
@@ -137,7 +137,7 @@ const About = () => {
                 <TeamMember
                   key={6}
                   name="Ali Qadir"
-                  role="Unity Developer"
+                  role="Game Developer"
                   description=""
                   imageSrc="/aq.jpg"
                 />
@@ -148,7 +148,7 @@ const About = () => {
                   <TeamMember
                     key={3}
                     name="Shagnik Chakraborty"
-                    role="VR Developer"
+                    role="XR Developer"
                     description=""
                     imageSrc="/sc.png"
                   />
