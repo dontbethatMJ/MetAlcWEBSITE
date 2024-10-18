@@ -21,7 +21,7 @@ export const socialData = [
   },  
   {
     name: "Twitter",
-    link: "https://x.com/MetAlcCommunity",
+    link: "https://x.com/MetAlcProd",
     icon: TwitterIcon,
   },  
   {
