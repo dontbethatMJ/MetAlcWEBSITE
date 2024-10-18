@@ -136,10 +136,10 @@ const About = () => {
                 <div onClick={() => window.open("https://maybetarun.in", "_blank")}>
                   <TeamMember
                     key={3}
-                    name="Tarun Gupta"
-                    role="Web Developer"
+                    name="Shagnik Chakraborty"
+                    role="VR Developer"
                     description=""
-                    imageSrc="/tg.png"
+                    imageSrc="/sc.png"
                   />
                 </div>
               </div>
@@ -147,10 +147,10 @@ const About = () => {
                 <div onClick={() => window.open("https://example.com/tushar", "_blank")}>
                   <TeamMember
                     key={4}
-                    name="Tushar"
-                    role="App Developer"
+                    name="Rachel Gupta"
+                    role="Community Manager"
                     description=""
-                    imageSrc="/ex.jpg"
+                    imageSrc="/rg.jpg"
                   />
                 </div>
               </div>
@@ -158,10 +158,10 @@ const About = () => {
                 <div onClick={() => window.open("https://example.com/ridhim", "_blank")}>
                   <TeamMember
                     key={5}
-                    name="Ridhim"
+                    name="Ridhim Dubey"
                     role="CGI Artist"
                     description=""
-                    imageSrc="/ex.jpg"
+                    imageSrc="/rd.jpg"
                   />
                 </div>
               </div>
@@ -172,7 +172,7 @@ const About = () => {
                     name="Ali Qadir"
                     role="Unity Developer"
                     description=""
-                    imageSrc="/ex.jpg"
+                    imageSrc="/aq.jpg"
                   />
                 </div>
               </div>
@@ -188,10 +188,10 @@ const About = () => {
                 <div onClick={() => window.open("https://example.com/shagnik", "_blank")}>
                   <TeamMember
                     key={3}
-                    name="Shagnik"
-                    role="VR Developer"
+                    name="Tarun Gupta"
+                    role="Web Developer"
                     description=""
-                    imageSrc="/ex.jpg"
+                    imageSrc="/tg.png"
                   />
                 </div>
               </div>
@@ -199,10 +199,10 @@ const About = () => {
                 <div onClick={() => window.open("https://example.com/rachel", "_blank")}>
                   <TeamMember
                     key={3}
-                    name="Rachel"
-                    role="Community Manager"
+                    name="Tushar Maithani"
+                    role="App Developer"
                     description=""
-                    imageSrc="/ex.jpg"
+                    imageSrc="/tm.jpg"
                   />
                 </div>
               </div>
