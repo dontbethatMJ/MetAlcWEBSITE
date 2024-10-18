@@ -1,81 +1,74 @@
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css';
-import { RxArrowTopRight, RxCrop, RxPencil2, RxDesktop, RxReader, RxRocket } from 'react-icons/rx';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const serviceData = [
   {
-    title: "Branding",
-    link: "https://example.com/branding",  // Link
-    image: "/ser1.png",  // Image path
+    title: "Gaming (2D/3D Games, Game Design, Game Art, UI, Trailer)",
+    image: "/ser1.png",
   },
   {
-    title: "Design",
-    link: "https://example.com/design",  // Link
-    image: "/ser1.png",  // Image path
+    title: "XR Development",
+    image: "/ser1.png", 
   },
   {
-    title: "Development",
-    link: "https://example.com/development",  // Link
-    image: "/ser1.png",  // Image path
+    title: "CGI VFX",
+    image: "/ser1.png", 
   },
   {
-    title: "Copywriting",
-    link: "https://example.com/copywriting",  // Link
-    image: "/ser1.png",  // Image path
+    title: "3D Product Visualization",
+    image: "/ser1.png", 
   },
   {
-    title: "SEO",
-    link: "https://example.com/seo",  // Link
-    image: "/ser1.png",  // Image path
+    title: "Web Development (Frontend)",
+    image: "/ser1.png", 
+  },
+  {
+    title: "App Development",
+    image: "/ser1.png", 
   },
 ];
 
 const ServiceSlider = () => {
   return (
     <Swiper
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-      }}
-      navigation={false}  // Disable navigation arrows
+      spaceBetween={12} // Gap between cards
       pagination={{
         clickable: true,
-        type: 'bullets',
       }}
-      modules={[Pagination]}  // Remove Navigation from modules
-      freeMode
-      className="h-[240px] sm:h-[340px]"
+      modules={[Pagination]}
+      breakpoints={{
+        640: { 
+          slidesPerView: 1,
+        },
+        768: { 
+          slidesPerView: 2, 
+        },
+        1024: { 
+          slidesPerView: 3, 
+        },
+      }}
+      className="flex flex-wrap justify-center"
     >
-      {serviceData.map((item, i) => (
-        <SwiperSlide key={i}>
-          <a href={item.link} target="_blank" rel="noopener noreferrer"> 
-            <div className="bg-[#6fc3ce] text-[#16232b] h-max rounded-lg px-0 py-0 flex flex-col group cursor-pointer hover:brightness-110 transition-all duration-300">
-              {/* image */}
-              <div className="h-[40%] overflow-hidden rounded-t-lg">
-                <img src={item.image} alt={item.title} className="w-full h-[140px] md:h-full object-cover" /> 
-              </div>
-
-              {/* title and arrow container */}
-              <div className="flex flex-col justify-between h-[60%] m-4 text-lg">
-                <div className="mb-2">{item.title}</div> 
-
-                {/* arrow */}
-                <div className="flex items-center md:mt-12 text-3xl">
-                  <RxArrowTopRight
-                    className="group-hover:rotate-45 transition-all duration-300"
-                    aria-hidden
-                  />
-                </div>
-              </div>
+      {serviceData.map((service, index) => (
+        <SwiperSlide key={index}>
+          <motion.div
+            className="flex flex-col items-center cursor-grab" 
+            whileHover={{ filter: 'brightness(1.2)' }}
+          >
+            <div className="relative w-2/3 md:w-full aspect-square overflow-hidden"> 
+              <img src={service.image} alt="services" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" /> {/* Gradient overlay */}
             </div>
-          </a>
+            <div className="w-2/3 md:w-full bg-black text-white flex justify-center items-center text-center p-2 h-8">
+              <h3 className="-mt-12 absolute w-[200px]">{service.title}</h3>
+            </div>
+            <div className="w-2/3 md:w-full bg-transparent flex justify-center items-center text-center p-2 h-12">
+            </div>
+          </motion.div>
         </SwiperSlide>
       ))}
     </Swiper>

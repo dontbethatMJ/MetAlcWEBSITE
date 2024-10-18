@@ -73,7 +73,7 @@ const WorkSlider = () => {
     >
       {workSlides.slides.map((slide, i) => (
         <SwiperSlide key={i}>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-grab">
             {slide.images.map((image, imageI) => (
               <div
                 className="relative rounded-lg overflow-hidden flex items-center justify-center group"
