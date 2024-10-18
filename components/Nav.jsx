@@ -24,7 +24,7 @@ export const navData = [
   { name: "contactUs", path: "/contactus", Icon: contactIcon, text: "Contact Us" },
   { name: "aboutUs", path: "/aboutus", Icon: aboutIcon, text: "About Us" },
   // { name: "newsletter", path: "/newsletter", Icon: blogIcon, text: "NewsLetter" },
-  { name: "artwork", path: "https://community.metalcproductions.com/artwork", Icon: artworksIcon, text: "Artwork" },
+  { name: "artwork", path: "/artwork", Icon: artworksIcon, text: "Artwork" },
 ];
 
 const Nav = () => {
