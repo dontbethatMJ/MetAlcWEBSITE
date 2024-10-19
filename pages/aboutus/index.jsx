@@ -159,7 +159,7 @@ const About = () => {
                   <TeamMember
                     key={5}
                     name="Ridhim Dubey"
-                    role="CGI Artist"
+                    role="3D Artist"
                     description=""
                     imageSrc="/rd.jpg"
                   />
