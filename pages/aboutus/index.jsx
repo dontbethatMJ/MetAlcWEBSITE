@@ -150,7 +150,7 @@ const About = () => {
                     name="Shagnik Chakraborty"
                     role="XR Developer"
                     description=""
-                    imageSrc="/sc.png"
+                    imageSrc="/sc.jpg"
                   />
                 </div>
               </div>
