@@ -34,6 +34,11 @@
       "source": "/community",
       "destination": "https://community.metalcproductions.com",
       "permanent": true
+    },
+    {
+      "source": "/whatsapp",
+      "destination": "https://chat.whatsapp.com/Ksq0ZjV7ujYIACZT0V9Grh",
+      "permanent": true
     }
   ]
 }
