@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/assets",
+      "destination": "https://metalccommunity.gumroad.com",
+      "permanent": true
+    },
+    {
       "source": "/discord",
       "destination": "https://discord.gg/V2UYXKHWsp",
       "permanent": true
