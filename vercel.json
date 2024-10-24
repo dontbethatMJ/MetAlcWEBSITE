@@ -1,8 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/assets",
-      "destination": "http://community.metalcproductions.com/",
+      "source": "/youtube",
+      "destination": "https://www.youtube.com/@MetAlcProductions",
+      "permanent": true
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://www.linkedin.com/company/metalcproductions/",
       "permanent": true
     },
     {
@@ -16,8 +21,8 @@
       "permanent": true
     },
     {
-      "source": "/twitter",
-      "destination": "https://www.twitter.com/metalcprod",
+      "source": "/x",
+      "destination": "https://www.x.com/metalcprod",
       "permanent": true
     }
   ]
