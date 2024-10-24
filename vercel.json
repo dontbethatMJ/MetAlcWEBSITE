@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/assets",
-      "destination": "https://metalccommunity.gumroad.com",
+      "destination": "http://community.metalcproductions.com/",
       "permanent": true
     },
     {
