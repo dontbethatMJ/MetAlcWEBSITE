@@ -24,6 +24,16 @@
       "source": "/x",
       "destination": "https://www.x.com/metalcprod",
       "permanent": true
+    },
+    {
+      "source": "/twitter",
+      "destination": "https://www.x.com/metalcprod",
+      "permanent": true
+    },
+    {
+      "source": "/community",
+      "destination": "https://community.metalcproductions.com",
+      "permanent": true
     }
   ]
 }
