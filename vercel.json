@@ -1,8 +1,18 @@
 {
   "redirects": [
     {
-      "source": "/mjcheonma",
-      "destination": "https://mjcheonma.itch.io",
+      "source": "/discord",
+      "destination": "https://discord.gg/V2UYXKHWsp",
+      "permanent": true
+    },
+    {
+      "source": "/instagram",
+      "destination": "https://www.instagram.com/metalcproductions",
+      "permanent": true
+    },
+    {
+      "source": "/twitter",
+      "destination": "https://www.twitter.com/metalcprod",
       "permanent": true
     }
   ]
