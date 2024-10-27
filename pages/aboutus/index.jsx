@@ -169,7 +169,7 @@ const About = () => {
                 <div onClick={() => window.open("https://www.linkedin.com/in/rachell-gupta", "_blank")}>
                   <TeamMember
                     key={4}
-                    name="Rachel Gupta"
+                    name="Rachell Gupta"
                     role="Community Manager"
                     description=""
                     imageSrc="/rg.jpg"
