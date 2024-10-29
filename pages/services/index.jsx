@@ -57,7 +57,7 @@ const Services = () => {
       </div>
       {/* Down Arrow */}
       <button
-        onClick={() => window.location.href = '/projects'}
+        onClick={() => window.location.href = '/testimonials'}
         className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden md:block" // Centered and hidden on small devices
       >
         <motion.div

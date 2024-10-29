@@ -151,7 +151,7 @@ const Contact = () => {
       )}
       {/* Down Arrow */}
       <button
-        onClick={() => window.location.href = '/newsletter'}
+        onClick={() => window.location.href = '/aboutus'}
         className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden md:block" // Centered and hidden on small devices
       >
         <motion.div
