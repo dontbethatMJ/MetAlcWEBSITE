@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/react"
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
+import { FaArrowDown } from 'react-icons/fa';
 
 import Head from 'next/head';
 
@@ -98,7 +99,7 @@ const Home = () => {
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
-            className="h1 -ml-1 mb-2 text-[62px]"
+            className="h1 -ml-1 mb-2 text-[56px] md:text-[62px]"
           >
             MetAlc Productions
           </motion.h1>
@@ -148,7 +149,7 @@ const Home = () => {
         We are a small venture trying to build a small space for ourselves in this big universe of metaverse that will truly lead the world in a few years . . .
       </p>
       <button
-        onClick={() => window.location.href = '/about'}
+        onClick={() => window.location.href = '/projects'}
         className="mb-4 hidden md:block"
       >
         <motion.div
@@ -165,6 +166,11 @@ const Home = () => {
         </motion.div>
       </button>
     </div>
+
+    <div className="absolute bottom-36 md:bottom-4 left-[50%] translate-x-[-50%] flex scroll-indicator opacity-80">
+      Scroll Down <span className="p-1"><FaArrowDown/></span>
+    </div>
+
   </>
   );
 };

@@ -75,7 +75,7 @@ const Work = () => {
         }
       `}</style>
       <button
-        onClick={() => window.location.href = '/testimonials'}
+        onClick={() => window.location.href = '/services'}
         className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden md:block" // Centered and hidden on small devices
       >
         <motion.div

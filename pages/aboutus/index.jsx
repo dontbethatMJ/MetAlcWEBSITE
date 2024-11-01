@@ -214,7 +214,7 @@ const About = () => {
       
       <div className="flex justify-center mb-4" >
         <button
-            onClick={() => window.location.href = '/services'}
+            onClick={() => window.location.href = '/artwork'}
             className="hidden md:block"
           >
           <motion.div
