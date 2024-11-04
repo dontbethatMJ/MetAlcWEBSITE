@@ -32,7 +32,7 @@ const Home = () => {
       playerRef.current = new window.YT.Player('youtube-player', {
         videoId: 'F-2lSWJ8Zxw',
         playerVars: {
-          autoplay: 1,
+          autoplay: 0,
           controls: 0,
           loop: 1,
           playlist: 'F-2lSWJ8Zxw',

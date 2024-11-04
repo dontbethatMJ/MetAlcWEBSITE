@@ -1,8 +1,9 @@
 import { Comfortaa } from "next/font/google";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
- import Header from "../components/Header";
- import Nav from "../components/Nav";
+import Header from "../components/Header";
+import Nav from "../components/Nav";
 
 // setup font
 const comfortaa = Comfortaa({
@@ -12,6 +13,10 @@ const comfortaa = Comfortaa({
 });
 
 const Layout = ({ children }) => {
+
+  const router = useRouter(); // Get the router object
+  const isArtworkPage = router.asPath === '/artwork' || router.asPath === 'https://community.metalcproductions.com/artwork'; // Check if the current page is /artwork or the full URL
+
   return (
     <main
       className={`page bg-site text-white bg-cover bg-no-repeat ${comfortaa.variable} font-comfortaa relative`}
@@ -40,7 +45,7 @@ const Layout = ({ children }) => {
     */}
     <Nav /> 
       {/*  */}
-      <Header />
+      <Header isArtworkPage={isArtworkPage} />
 
       {/* main content */}
       {children}

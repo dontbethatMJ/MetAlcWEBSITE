@@ -36,8 +36,7 @@ export const socialData = [
   },
 ];
 
-const Socials = ({ isArtworkPage }) => {
-  if (isArtworkPage) return null; 
+const Socials = () => {
 
   return (
     <div className="flex items-center gap-x-5 text-lg w-full justify-center md:justify-end">

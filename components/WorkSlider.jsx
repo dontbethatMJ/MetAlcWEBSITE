@@ -13,48 +13,48 @@ const workSlides = {
     {
       images: [
         {
-          title: "title",
+          title: "Game Teaser",
           path: "/thumb1.jpg",
-          link: "http://example.com",
+          link: "",
         },
         {
-          title: "title",
+          title: "Sci-Fi Game UI",
           path: "/thumb2.jpg",
-          link: "http://example.com",
+          link: "",
         },
         {
-          title: "title",
+          title: "Speedball 3d Game",
           path: "/thumb3.jpg",
-          link: "http://example.com",
+          link: "https://metaversealchemists.itch.io/speedy-ball-balance",
         },
         {
-          title: "title",
+          title: "Can 3D visualisation & animation",
           path: "/thumb4.jpg",
-          link: "http://example.com",
+          link: "https://www.artstation.com/artwork/AZoXkq",
         },
       ],
     },
     {
       images: [
         {
-          title: "title",
+          title: "Fantasy environment (with Hogwartz castle) ",
           path: "/thumb4.jpg",
-          link: "http://example.com",
+          link: "",
         },
         {
-          title: "title",
+          title: "Japanese shrine",
           path: "/thumb1.jpg",
-          link: "http://example.com",
+          link: "https://www.artstation.com/artwork/0laZdE",
         },
         {
-          title: "title",
+          title: "Audio interface visualisation (AudioArray) ",
           path: "/thumb2.jpg",
-          link: "http://example.com",
+          link: "https://www.artstation.com/artwork/zxzWxq",
         },
         {
-          title: "title",
+          title: "360 vr viewer app",
           path: "/thumb3.jpg",
-          link: "http://example.com",
+          link: "https://play.google.com/store/apps/details?id=com.viewcon360.ViewCon360",
         },
       ],
     },
@@ -104,11 +104,11 @@ const WorkSlider = () => {
                       className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
                     >
                       {/* title part 1 */}
-                      <div className="delay-100">LIVE</div>
+                      <div className="delay-100 uppercase max-w-64 text-center">{image.title}</div>
                       {/* title part 2 */}
-                      <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                      {/* <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
                         PROJECT
-                      </div>
+                      </div> */}
                       {/* icon */}
                       <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
                         <BsArrowRight aria-hidden />
