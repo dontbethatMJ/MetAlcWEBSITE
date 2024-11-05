@@ -36,7 +36,7 @@ const Home = () => {
           controls: 0,
           loop: 1,
           playlist: 'kxUV13FhJjY',
-          mute: 1,
+          mute: 0,
           disablekb: 1,
           fs: 0,
           modestbranding: 1,
@@ -121,12 +121,12 @@ const Home = () => {
       )}
       <div id="youtube-player" className="absolute top-0 left-0 w-full h-full"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
-      <button 
+      {/* <button 
         onClick={toggleMute} 
         className="absolute top-4 left-4 bg-white p-2 rounded-full w-10 h-10 flex items-center justify-center z-10"
       >
         {isMuted ? '🔇' : '🔊'}
-      </button>
+      </button> */}
     </div>
 
     <div className="w-full h-[40vh] lg:h-[30vh] bg-black flex items-center justify-center relative">
