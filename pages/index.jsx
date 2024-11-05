@@ -30,12 +30,12 @@ const Home = () => {
 
     const loadPlayer = () => {
       playerRef.current = new window.YT.Player('youtube-player', {
-        videoId: 'F-2lSWJ8Zxw',
+        videoId: 'kxUV13FhJjY',
         playerVars: {
           autoplay: 0,
           controls: 0,
           loop: 1,
-          playlist: 'F-2lSWJ8Zxw',
+          playlist: 'kxUV13FhJjY',
           mute: 1,
           disablekb: 1,
           fs: 0,
@@ -61,19 +61,6 @@ const Home = () => {
       }
     };
   }, [router.asPath]);
-
-  useEffect(() => {
-    // Reload the page when the route changes
-    const handleRouteChange = () => {
-      window.location.reload();
-    };
-
-    router.events.on('routeChangeComplete', handleRouteChange);
-
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
 
   const toggleMute = () => {
     if (playerRef.current) {

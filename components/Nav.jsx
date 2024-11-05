@@ -57,7 +57,7 @@ const Nav = () => {
                 className="absolute pr-14 right-0 hidden xl:group-hover:flex"
               >
                 <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
-                  <div className="text-[12px] leading-none font-semibold capitalize transition-all duration-1000">
+                  <div className="text-[12px] leading-none font-semibold capitalize transition-all duration-1000 delay-1000">
                     {link.name}
                   </div>
                   {/* triangle */}
@@ -72,7 +72,7 @@ const Nav = () => {
             {/* icon */}
             <div className="relative flex items-center">
               {expanded && (
-                <div className="mr-2 text-white text-sm xl:block hidden transition-all duration-1000">{link.text}</div>
+                <div className="mr-2 text-white text-sm xl:block hidden transition-all duration-1000 delay-1000">{link.text}</div>
               )}
               <Image src={link.Icon} alt={link.name} width={20} height={20} aria-hidden />
             </div>

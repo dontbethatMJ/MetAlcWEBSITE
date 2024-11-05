@@ -40,7 +40,7 @@ const Services = () => {
               animate="show"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-center"
             >
-              ( Swipe right to see more )
+              ( Swipe to see more )
             </motion.p>
           </div>
 
