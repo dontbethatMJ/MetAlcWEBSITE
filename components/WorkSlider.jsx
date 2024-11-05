@@ -15,7 +15,7 @@ const workSlides = {
         {
           title: "Game Teaser",
           path: "/thumb1.jpg",
-          link: "",
+          link: "https://youtu.be/pe23yRk7wkU",
         },
         {
           title: "Sci-Fi Game UI",
@@ -73,7 +73,7 @@ const workSlides = {
         {
           title: "Aaargh!!",
           path: "/aaargh.gif",
-          link: "https://www.maybetarun.in/projects/aaargh",
+          link: "https://aaargh.vercel.app",
         },
         {
           title: "",
