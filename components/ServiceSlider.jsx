@@ -8,27 +8,27 @@ import 'swiper/css/pagination';
 const serviceData = [
   {
     title: "Gaming (2D/3D Games, Game Design, Game Art, UI, Trailer)",
-    image: "/ser1.png",
+    image: "/game.webp",
   },
   {
     title: "XR Development",
-    image: "/ser1.png", 
+    image: "/vr.webp", 
   },
   {
     title: "CGI VFX",
-    image: "/ser1.png", 
+    image: "/cgi.webp", 
   },
   {
     title: "3D Product Visualization",
-    image: "/ser1.png", 
+    image: "/prod.webp", 
   },
   {
     title: "Web Development (Frontend)",
-    image: "/ser1.png", 
+    image: "/web.webp", 
   },
   {
     title: "App Development",
-    image: "/ser1.png", 
+    image: "/app.webp", 
   },
 ];
 

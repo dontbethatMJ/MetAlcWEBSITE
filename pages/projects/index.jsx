@@ -54,7 +54,7 @@ const Work = () => {
               animate="show"
               className="text-center mb-4 text-white"
             >
-              Swipe right to see more
+              Swipe to see more
             </motion.p>
             <WorkSlider />
           </motion.div>
