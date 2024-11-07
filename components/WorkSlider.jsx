@@ -13,47 +13,47 @@ const workSlides = {
     {
       images: [
         {
-          title: "Game Teaser",
-          path: "/thumb1.jpg",
-          link: "https://youtu.be/pe23yRk7wkU",
+          title: "Japanese shrine",
+          path: "/shrine.png",
+          link: "https://www.artstation.com/artwork/0laZdE",
         },
         {
           title: "Sci-Fi Game UI",
-          path: "/thumb2.jpg",
-          link: "",
+          path: "/scifi.png",
+          link: "https://youtu.be/9l_eGlLGvjc",
         },
         {
           title: "Speedball 3d Game",
-          path: "/thumb3.jpg",
+          path: "/speedball.png",
           link: "https://metaversealchemists.itch.io/speedy-ball-balance",
         },
         {
-          title: "Can 3D visualisation & animation",
-          path: "/thumb4.jpg",
-          link: "https://www.artstation.com/artwork/AZoXkq",
+          title: "Fantasy environment (with Hogwartz castle)",
+          path: "/castle.png",
+          link: "",
         },
       ],
     },
     {
       images: [
         {
-          title: "Fantasy environment (with Hogwartz castle)",
-          path: "/thumb4.jpg",
-          link: "",
+          title: "Can 3D visualisation & animation",
+          path: "/can.png",
+          link: "https://www.artstation.com/artwork/AZoXkq",
         },
         {
-          title: "Japanese shrine",
-          path: "/thumb1.jpg",
-          link: "https://www.artstation.com/artwork/0laZdE",
+          title: "Beginner FPV Controller Prototype",
+          path: "/bfcp.png",
+          link: "https://metaversealchemists.itch.io/fpvunity1",
         },
         {
           title: "Audio interface visualisation (AudioArray)",
-          path: "/thumb2.jpg",
+          path: "/aiv.png",
           link: "https://www.artstation.com/artwork/zxzWxq",
         },
         {
           title: "360 vr viewer app",
-          path: "/thumb3.jpg",
+          path: "/pocketview.png",
           link: "https://play.google.com/store/apps/details?id=com.viewcon360.ViewCon360",
         },
       ],
@@ -61,23 +61,61 @@ const workSlides = {
     {
       images: [
         {
-          title: "Cognify",
-          path: "/cognify.png",
-          link: "https://maybetarun.github.io/CognifyWebsite.github.io/",
+          title: "Blender Basic Logo Animation",
+          path: "/bbla.gif",
+          link: "https://youtu.be/n3ax40nFc20",
         },
         {
-          title: "",
-          path: "/thumb1.jpg",
-          link: "",
+          title: "Third Person Controller Prototype",
+          path: "/tpc.png",
+          link: "https://metaversealchemists.itch.io/tpvunity1",
         },
+        {
+          title: "Portfolio (Tarun)",
+          path: "/portfoliotarun.png",
+          link: "https://maybetarun.in",
+        },
+        {
+          title: "Portfolio (Dakshi)",
+          path: "/portfolioduck.png",
+          link: "https://dakshie.xyz",
+        },
+      ],
+    },
+    {
+      images: [
         {
           title: "Aaargh!!",
           path: "/aaargh.gif",
           link: "https://aaargh.vercel.app",
         },
         {
-          title: "",
-          path: "/thumb3.jpg",
+          title: "Cognify",
+          path: "/cognify.png",
+          link: "https://maybetarun.github.io/CognifyWebsite.github.io/",
+        },
+        {
+          title: "RetroUI",
+          path: "/retroui.png",
+          link: "http://retroui.io",
+        },
+        {
+          title: "ChainVoice",
+          path: "/chainvoice.png",
+          link: "https://chainvoice.vercel.app",
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: "Sassy Livid",
+          path: "/sassylivid.png",
+          link: "https://sassy-livid.vercel.app",
+        },
+        {
+          title: "More Soon",
+          path: "/ex2.png",
           link: "",
         },
       ],
