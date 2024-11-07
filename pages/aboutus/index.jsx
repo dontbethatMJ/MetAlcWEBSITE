@@ -107,7 +107,7 @@ const About = () => {
                   <TeamMember
                     key={3}
                     name="Mudit Jain"
-                    role="Founder"
+                    role="Co-Founder"
                     description="XR Designer"
                     imageSrc="/mj.jpg"
                   />
