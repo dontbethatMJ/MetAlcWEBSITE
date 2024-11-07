@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import Link from 'next/link';
+// import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/react"
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
@@ -9,7 +9,7 @@ import { FaArrowDown } from 'react-icons/fa';
 import Head from 'next/head';
 
 const Home = () => {
-  const [isMuted, setIsMuted] = useState(true);
+  // const [isMuted, setIsMuted] = useState(true);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const playerRef = useRef(null);
   const router = useRouter();
@@ -37,15 +37,17 @@ const Home = () => {
           loop: 1,
           playlist: 'kxUV13FhJjY',
           mute: 0,
-          disablekb: 1,
+          disablekb: 0,
           fs: 0,
           modestbranding: 1,
           rel: 0,
-          showinfo: 0
+          showinfo: 0,
+          cc_load_policy: 0,
+          origin: 'https://metalcproductions.com',
         },
         events: {
           onReady: (event) => {
-            event.target.setVolume(20);
+            // event.target.setVolume(20);
             setIsVideoLoaded(true);
           }
         }
@@ -62,16 +64,16 @@ const Home = () => {
     };
   }, [router.asPath]);
 
-  const toggleMute = () => {
-    if (playerRef.current) {
-      if (isMuted) {
-        playerRef.current.unMute();
-      } else {
-        playerRef.current.mute();
-      }
-      setIsMuted(!isMuted);
-    }
-  };
+  // const toggleMute = () => {
+  //   if (playerRef.current) {
+  //     if (isMuted) {
+  //       playerRef.current.unMute();
+  //     } else {
+  //       playerRef.current.mute();
+  //     }
+  //     setIsMuted(!isMuted);
+  //   }
+  // };
 
   return (
     <>
@@ -120,7 +122,7 @@ const Home = () => {
         />
       )}
       <div id="youtube-player" className="absolute top-0 left-0 w-full h-full"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black pointer-events-none"></div>
       {/* <button 
         onClick={toggleMute} 
         className="absolute top-4 left-4 bg-white p-2 rounded-full w-10 h-10 flex items-center justify-center z-10"

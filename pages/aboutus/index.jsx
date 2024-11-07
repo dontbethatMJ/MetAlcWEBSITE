@@ -196,6 +196,17 @@ const About = () => {
                 </div>
               </div>
               <div className="flex-1 min-w-[150px] max-w-[200px]"> 
+                <div onClick={() => window.open("https://dakshie.xyz", "_blank")}>
+                  <TeamMember
+                    key={3}
+                    name="Dakshi Goel"
+                    role="Web Developer"
+                    description=""
+                    imageSrc="/ex.jpg"
+                  />
+                </div>
+              </div>
+              <div className="flex-1 min-w-[150px] max-w-[200px]"> 
                 <div onClick={() => window.open("https://www.linkedin.com/in/contact-maithani-ji", "_blank")}>
                   <TeamMember
                     key={3}
