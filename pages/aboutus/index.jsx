@@ -109,7 +109,7 @@ const About = () => {
                     name="Mudit Jain"
                     role="Co-Founder"
                     description="XR Designer"
-                    imageSrc="/mj.jpg"
+                    imageSrc="/mj.png"
                   />
                 </div>
               </div>
