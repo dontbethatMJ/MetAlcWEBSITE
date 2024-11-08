@@ -103,7 +103,7 @@ const About = () => {
               animate="show" 
             >
               <div className="flex-1 min-w-[150px] max-w-[200px]"> 
-                <div onClick={() => window.open("https://www.linkedin.com/in/mjcheonma", "_blank")}>
+                <div>
                   <TeamMember
                     key={3}
                     name="Mudit Jain"
@@ -114,7 +114,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex-1 min-w-[150px] max-w-[200px]">
-                <div onClick={() => window.open("https://www.linkedin.com/in/ayushpandeyap/", "_blank")}>
+                <div>
                   <TeamMember
                     key={4}
                     name="Ayush Pandey"
@@ -133,7 +133,7 @@ const About = () => {
               animate="show" 
             >
             <div className="flex-1 min-w-[150px] max-w-[200px]">
-              <div onClick={() => window.open("https://www.linkedin.com/in/ali--qadir/", "_blank")}>
+              <div>
                 <TeamMember
                   key={6}
                   name="Ali Qadir"
@@ -144,7 +144,7 @@ const About = () => {
               </div>
             </div>
               <div className="flex-1 min-w-[150px] max-w-[200px]"> 
-                <div onClick={() => window.open("https://www.linkedin.com/in/shagnik-chakraborty-08b79a223/", "_blank")}>
+                <div>
                   <TeamMember
                     key={3}
                     name="Shagnik Chakraborty"
@@ -155,7 +155,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex-1 min-w-[150px] max-w-[200px]">
-                <div onClick={() => window.open("https://www.linkedin.com/in/ridhim-dubey-78bb35259/", "_blank")}>
+                <div>
                   <TeamMember
                     key={5}
                     name="Ridhim Dubey"
@@ -166,7 +166,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex-1 min-w-[150px] max-w-[200px]">
-                <div onClick={() => window.open("https://www.linkedin.com/in/rachell-gupta", "_blank")}>
+                <div>
                   <TeamMember
                     key={4}
                     name="Rachell Gupta"
@@ -185,7 +185,7 @@ const About = () => {
               animate="show" 
             >
               <div className="flex-1 min-w-[150px] max-w-[200px]"> 
-                <div onClick={() => window.open("https://maybetarun.in", "_blank")}>
+                <div>
                   <TeamMember
                     key={3}
                     name="Tarun Gupta"
@@ -196,18 +196,18 @@ const About = () => {
                 </div>
               </div>
               <div className="flex-1 min-w-[150px] max-w-[200px]"> 
-                <div onClick={() => window.open("https://dakshie.xyz", "_blank")}>
+                <div>
                   <TeamMember
                     key={3}
                     name="Dakshi Goel"
                     role="Web Developer"
                     description=""
-                    imageSrc="/ex.jpg"
+                    imageSrc="/dg.jpg"
                   />
                 </div>
               </div>
               <div className="flex-1 min-w-[150px] max-w-[200px]"> 
-                <div onClick={() => window.open("https://www.linkedin.com/in/contact-maithani-ji", "_blank")}>
+                <div>
                   <TeamMember
                     key={3}
                     name="Tushar Maithani"
