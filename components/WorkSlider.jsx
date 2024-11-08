@@ -23,14 +23,14 @@ const workSlides = {
           link: "https://youtu.be/9l_eGlLGvjc",
         },
         {
-          title: "Speedball 3d Game",
-          path: "/speedball.png",
-          link: "https://metaversealchemists.itch.io/speedy-ball-balance",
+          title: "Audio interface visualisation (AudioArray)",
+          path: "/aiv.png",
+          link: "https://www.artstation.com/artwork/zxzWxq",
         },
         {
-          title: "Fantasy environment (with Hogwartz castle)",
-          path: "/castle.png",
-          link: "",
+          title: "360 vr viewer app",
+          path: "/pocketview.png",
+          link: "https://play.google.com/store/apps/details?id=com.viewcon360.ViewCon360",
         },
       ],
     },
@@ -47,20 +47,6 @@ const workSlides = {
           link: "https://metaversealchemists.itch.io/fpvunity1",
         },
         {
-          title: "Audio interface visualisation (AudioArray)",
-          path: "/aiv.png",
-          link: "https://www.artstation.com/artwork/zxzWxq",
-        },
-        {
-          title: "360 vr viewer app",
-          path: "/pocketview.png",
-          link: "https://play.google.com/store/apps/details?id=com.viewcon360.ViewCon360",
-        },
-      ],
-    },
-    {
-      images: [
-        {
           title: "Blender Basic Logo Animation",
           path: "/bbla.gif",
           link: "https://youtu.be/n3ax40nFc20",
@@ -70,6 +56,10 @@ const workSlides = {
           path: "/tpc.png",
           link: "https://metaversealchemists.itch.io/tpvunity1",
         },
+      ],
+    },
+    {
+      images: [
         {
           title: "Portfolio (Tarun)",
           path: "/portfoliotarun.png",
@@ -80,38 +70,29 @@ const workSlides = {
           path: "/portfolioduck.png",
           link: "https://dakshie.xyz",
         },
-      ],
-    },
-    {
-      images: [
         {
-          title: "Aaargh!!",
+          title: "WebGame with ReactJs (Aaargh!!)",
           path: "/aaargh.gif",
           link: "https://aaargh.vercel.app",
         },
         {
-          title: "Cognify",
-          path: "/cognify.png",
-          link: "https://maybetarun.github.io/CognifyWebsite.github.io/",
-        },
-        {
-          title: "RetroUI",
+          title: "Landing Page (RetroUI)",
           path: "/retroui.png",
           link: "http://retroui.io",
-        },
-        {
-          title: "ChainVoice",
-          path: "/chainvoice.png",
-          link: "https://chainvoice.vercel.app",
         },
       ],
     },
     {
       images: [
         {
-          title: "Sassy Livid",
+          title: "Landing Page (Sassy Livid)",
           path: "/sassylivid.png",
           link: "https://sassy-livid.vercel.app",
+        },
+        {
+          title: "Android App with Kotlin (Cognify)",
+          path: "/cognify.png",
+          link: "https://maybetarun.github.io/CognifyWebsite.github.io/",
         },
         {
           title: "More Soon",
@@ -148,12 +129,12 @@ const WorkSlider = () => {
                     alt={image.title}
                     width={500}
                     height={300}
-                    className="transition-all duration-300 group-hover:blur-[2px]"
+                    className="transition-all duration-300 group-hover:blur-[3px]"
                   />
 
                   {/* overlay gradient */}
                   <div
-                    className="absolute inset-0 bg-black opacity-10 group-hover:opacity-25 transition-all duration-700"
+                    className="absolute inset-0 bg-black opacity-40 group-hover:opacity-25 transition-all duration-700"
                     aria-hidden
                   />
 
