@@ -61,11 +61,6 @@ const workSlides = {
     {
       images: [
         {
-          title: "Portfolio (Tarun)",
-          path: "/portfoliotarun.png",
-          link: "https://maybetarun.in",
-        },
-        {
           title: "Portfolio (Dakshi)",
           path: "/portfolioduck.png",
           link: "https://dakshie.xyz",
@@ -80,19 +75,29 @@ const workSlides = {
           path: "/retroui.png",
           link: "http://retroui.io",
         },
-      ],
-    },
-    {
-      images: [
         {
           title: "Landing Page (Sassy Livid)",
           path: "/sassylivid.png",
           link: "https://sassy-livid.vercel.app",
         },
+      ],
+    },
+    {
+      images: [
         {
           title: "Android App with Kotlin (Cognify)",
           path: "/cognify.png",
           link: "https://maybetarun.github.io/CognifyWebsite.github.io/",
+        },
+        {
+          title: "Android App (Food Delivery App)",
+          path: "/food.png",
+          link: "https://play.google.com/store/apps/details?id=com.newanna",
+        },
+        {
+          title: "Android App (Truck Loading Tracker)",
+          path: "/truck.png",
+          link: "https://play.google.com/store/apps/details?id=com.freight_eg.freighteg",
         },
         {
           title: "More Soon",
