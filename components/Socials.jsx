@@ -3,9 +3,9 @@ import Image from "next/image";
 
 // Import image files
 import YoutubeIcon from '../public/youtube.svg';
-import InstagramIcon from '../public/instagram.png';
-import LinkedinIcon from '../public/linkedin.png';
-import TwitterIcon from '../public/twitter.png';
+import InstagramIcon from '../public/instagram.webp';
+import LinkedinIcon from '../public/linkedin.webp';
+import TwitterIcon from '../public/twitter.webp';
 import DiscordIcon from '../public/discord.svg';
 
 export const socialData = [

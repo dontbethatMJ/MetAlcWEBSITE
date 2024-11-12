@@ -72,7 +72,7 @@ const workSlides = {
         },
         {
           title: "Landing Page (RetroUI)",
-          path: "/retroui.png",
+          path: "/retroui.webp",
           link: "http://retroui.io",
         },
         {
@@ -101,7 +101,7 @@ const workSlides = {
         },
         {
           title: "More Soon",
-          path: "/ex2.png",
+          path: "/ex2.webp",
           link: "",
         },
       ],

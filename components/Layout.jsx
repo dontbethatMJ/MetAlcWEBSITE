@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
       {/* metadata */}
       <Head>
         <title>Metalc Productions</title>
-        <link rel="icon" href="/favicon.png" type="image/x-icon" />
+        <link rel="icon" href="/favicon.webp" type="image/x-icon" />
         <meta
           name="MetAlcProductions"
           content="Metaverse Alchemists building Multiversal Realities!"
@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         <meta name="theme-color" content="#f13024" />
         <meta property="og:title" content="Metalc Productions" />
         <meta property="og:description" content="Metaverse Alchemists building Multiversal Realities!" />
-        <meta property="og:image" content="/banner.png" />
+        <meta property="og:image" content="/banner.webp" />
         <meta property="og:url" content="https://metalcproductions.com" />
       </Head>
 

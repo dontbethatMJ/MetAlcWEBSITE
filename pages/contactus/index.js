@@ -50,7 +50,7 @@ const Contact = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-full bg-cover bg-center" style={{ backgroundImage: "url('/bg23.png')" }}>
+    <div className="h-full bg-cover bg-center" style={{ backgroundImage: "url('/bg23.webp')" }}>
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">
@@ -161,7 +161,7 @@ const Contact = () => {
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
-            src="/arrow.png"
+            src="/arrow.webp"
             alt="Down Arrow"
             className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />

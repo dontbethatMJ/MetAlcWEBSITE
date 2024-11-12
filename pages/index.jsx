@@ -81,7 +81,7 @@ const Home = () => {
       <title>MetAlc Productions</title>
     </Head>
     <Analytics/>
-    <div className="h-full relative bg-cover bg-center" style={{ backgroundImage: "url('/bg.png')" }}>
+    <div className="h-full relative bg-cover bg-center" style={{ backgroundImage: "url('/bg.webp')" }}>
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           <motion.h1
@@ -116,7 +116,7 @@ const Home = () => {
     <div className="w-full h-0 pb-[56.25%] relative overflow-hidden">
       {!isVideoLoaded && (
         <img 
-          src="/poster.png" 
+          src="/poster.webp" 
           alt="Video Poster" 
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
@@ -148,7 +148,7 @@ const Home = () => {
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
-            src="/arrow.png"
+            src="/arrow.webp"
             alt="Down Arrow"
             className="rotate-90 w-8 h-8 mt-16 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />

@@ -50,7 +50,7 @@ const Testimonials = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-screen bg-[url('/bg23.png')] bg-cover bg-center text-center pt-16 flex flex-col">
+    <div className="h-screen bg-[url('/bg23.webp')] bg-cover bg-center text-center pt-16 flex flex-col">
       <div className="container mx-auto flex-grow flex flex-col justify-center">
         <motion.h2
           variants={fadeIn("up", 0.2)}
@@ -145,7 +145,7 @@ const Testimonials = () => {
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
-            src="/arrow.png"
+            src="/arrow.webp"
             alt="Down Arrow"
             className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />

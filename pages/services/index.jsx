@@ -12,7 +12,7 @@ const Services = () => {
     <Head>
         <title>MetAlc Productions</title>
     </Head>
-    <div className="h-screen bg-[url('/bg23.png')] bg-cover bg-center py-36 flex items-center overflow-hidden relative">
+    <div className="h-screen bg-[url('/bg23.webp')] bg-cover bg-center py-36 flex items-center overflow-hidden relative">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
@@ -67,7 +67,7 @@ const Services = () => {
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
-            src="/arrow.png"
+            src="/arrow.webp"
             alt="Down Arrow"
             className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />

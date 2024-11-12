@@ -19,7 +19,7 @@ const About = () => {
     <div 
       className="h-screen py-8 md:py-12 text-center xl:text-left flex flex-col relative" 
       style={{
-        backgroundImage: "url('/bg23a.png')",
+        backgroundImage: "url('/bg23a.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -109,7 +109,7 @@ const About = () => {
                     name="Mudit Jain"
                     role="Co-Founder"
                     description="XR Designer"
-                    imageSrc="/mj.png"
+                    imageSrc="/mj.webp"
                   />
                 </div>
               </div>
@@ -120,7 +120,7 @@ const About = () => {
                     name="Ayush Pandey"
                     role="Co-Founder"
                     description="Technical Artist"
-                    imageSrc="/ap.jpg"
+                    imageSrc="/ap.webp"
                   />
                 </div>
               </div>
@@ -139,7 +139,7 @@ const About = () => {
                   name="Ali Qadir"
                   role="Game Developer"
                   description=""
-                  imageSrc="/aq.jpg"
+                  imageSrc="/aq.webp"
                 />
               </div>
             </div>
@@ -150,7 +150,7 @@ const About = () => {
                     name="Shagnik Chakraborty"
                     role="XR Developer"
                     description=""
-                    imageSrc="/sc.jpg"
+                    imageSrc="/sc.webp"
                   />
                 </div>
               </div>
@@ -161,7 +161,7 @@ const About = () => {
                     name="Ridhim Dubey"
                     role="3D Artist"
                     description=""
-                    imageSrc="/rd.jpg"
+                    imageSrc="/rd.webp"
                   />
                 </div>
               </div>
@@ -172,7 +172,7 @@ const About = () => {
                     name="Rachell Gupta"
                     role="Community Manager"
                     description=""
-                    imageSrc="/rg.jpg"
+                    imageSrc="/rg.webp"
                   />
                 </div>
               </div>
@@ -191,7 +191,7 @@ const About = () => {
                     name="Tarun Gupta"
                     role="Web Developer"
                     description=""
-                    imageSrc="/tg.png"
+                    imageSrc="/tg.webp"
                   />
                 </div>
               </div>
@@ -202,7 +202,7 @@ const About = () => {
                     name="Dakshi Goel"
                     role="AI & Front-end Developer"
                     description=""
-                    imageSrc="/dg.jpg"
+                    imageSrc="/dg.webp"
                   />
                 </div>
               </div>
@@ -213,7 +213,7 @@ const About = () => {
                     name="Tushar Maithani"
                     role="App Developer"
                     description=""
-                    imageSrc="/tm.jpg"
+                    imageSrc="/tm.webp"
                   />
                 </div>
               </div>
@@ -235,7 +235,7 @@ const About = () => {
             whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
           >
             <img
-              src="/arrow.png"
+              src="/arrow.webp"
               alt="Down Arrow"
               className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
             />

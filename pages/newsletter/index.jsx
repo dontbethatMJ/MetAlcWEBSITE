@@ -55,7 +55,7 @@ const Blog = () => {
       <title>MetAlc Productions</title>
     </Head>
     <div className="h-dvh py-32 text-center xl:text-left flex flex-col overflow-hidden relative" style={{
-      backgroundImage: 'url("/bg23.png")',
+      backgroundImage: 'url("/bg23.webp")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}>
@@ -108,7 +108,7 @@ const Blog = () => {
           whileHover={{ y: [-5, 2], transition: { yoyo: Infinity, duration: 0.5 } }}
         >
           <img
-            src="/arrow.png"
+            src="/arrow.webp"
             alt="Down Arrow"
             className="rotate-90 w-8 h-8 cursor-pointer hover:scale-110 transition-transform mx-auto"
           />

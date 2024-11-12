@@ -6,15 +6,15 @@ import { useState } from "react";
 import homeIcon from "../public/home.svg";
 import aboutIcon from "../public/about.svg";
 import servicesIcon from "../public/services.svg";
-import workIcon from "../public/projects.png";
-import testimonialsIcon from "../public/testimonials.png";
-import contactIcon from "../public/contactus.png";
-import blogIcon from "../public/newsletter.png";
-import artworksIcon from "../public/artworks.png";
+import workIcon from "../public/projects.webp";
+import testimonialsIcon from "../public/testimonials.webp";
+import contactIcon from "../public/contactus.webp";
+import blogIcon from "../public/newsletter.webp";
+import artworksIcon from "../public/artworks.webp";
 
 // Import hamburger icon
 import Image from "next/image";
-import hamburgerImg from "../public/hamburger.png";
+import hamburgerImg from "../public/hamburger.webp";
 
 export const navData = [
   { name: "home", path: "/", Icon: homeIcon, text: "Home" },
