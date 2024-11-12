@@ -23,7 +23,7 @@ const About = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: 'fit-content', // Updated to make the height fit the content
+        height: 'fit-content',
         }}
     >
 
@@ -110,6 +110,7 @@ const About = () => {
                     role="Co-Founder"
                     description="XR Designer"
                     imageSrc="/mj.webp"
+                    link="https://www.linkedin.com/in/dontbethatmj/"
                   />
                 </div>
               </div>
@@ -121,6 +122,7 @@ const About = () => {
                     role="Co-Founder"
                     description="Technical Artist"
                     imageSrc="/ap.webp"
+                    link="https://www.linkedin.com/in/ayushpandeyap/"
                   />
                 </div>
               </div>
