@@ -200,7 +200,7 @@ const About = () => {
                   <TeamMember
                     key={3}
                     name="Dakshi Goel"
-                    role="Web Developer"
+                    role="AI & Front-end Developer"
                     description=""
                     imageSrc="/dg.jpg"
                   />
