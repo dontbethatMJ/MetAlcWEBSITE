@@ -36,6 +36,11 @@
       "permanent": true
     },
     {
+      "source": "/dontbethatmj",
+      "destination": "https://youtube.com/playlist?list=PLlCOv3VSwlkLvZ4q_oXkNdrI8X0EMEEri&si=lhONcmFBxL-N0FCE",
+      "permanent": true
+    },
+    {
       "source": "/whatsapp",
       "destination": "https://chat.whatsapp.com/Ksq0ZjV7ujYIACZT0V9Grh",
       "permanent": true
