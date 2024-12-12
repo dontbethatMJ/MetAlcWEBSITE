@@ -30,7 +30,7 @@ const workSlides = {
         {
           title: "360 vr viewer app",
           path: "/pocketview.png",
-          link: "https://play.google.com/store/apps/details?id=com.viewcon360.ViewCon360",
+          link: "https://play.google.com/store/apps/details?id=com.ViewCon360Ltd.PocketView360",
         },
       ],
     },
