@@ -8,6 +8,8 @@ import LinkedinIcon from '../public/linkedin.webp';
 import TwitterIcon from '../public/twitter.webp';
 import DiscordIcon from '../public/discord.svg';
 
+import logo from '../public/favicon.webp';
+
 export const socialData = [
   {
     name: "LinkedIn",
@@ -39,7 +41,19 @@ export const socialData = [
 const Socials = () => {
 
   return (
-    <div className="flex items-center gap-x-5 text-lg w-full justify-center md:justify-end">
+    <div className="flex items-center gap-x-5 text-lg w-full justify-between">
+      <div
+        className="flex items-center justify-center cursor-pointer"
+        onClick={() => window.location.href = "https://www.metalcproductions.com"}
+      >
+        <Image src={logo} alt="Logo" width={64} height={64} />
+        <p className="font-anita text-white text-sm">
+          Metalc
+          <br />
+          Productions
+        </p>
+      </div>
+      <div className="flex items-center justify-center gap-x-2 md:gap-x-5">
       {socialData.map((social, i) => (
         <Link
           key={i}
@@ -60,6 +74,7 @@ const Socials = () => {
           <span className="sr-only">{social.name}</span>
         </Link>
       ))}
+      </div>
     </div>
   );
 };

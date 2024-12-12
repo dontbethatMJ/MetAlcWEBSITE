@@ -37,7 +37,7 @@ const Nav = () => {
 
   return (
     <nav className={`select-none flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[4%] z-50 top-2 w-full xl:w-14 xl:max-w-sm xl:h-screen transition-all duration-500 ${expanded ? "xl:w-44 xl:pl-5 xl:text-right" : ""}`}>
-      <div className={`flex w-full xl:flex-col items-center ${expanded ? "justify-end xl:justify-end" : "justify-center"} gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl transition-all duration-500 ${expanded ? "xl:pr-5" : ""}`}>
+      <div className={`flex w-full xl:flex-col items-center ${expanded ? "justify-end xl:justify-end" : "justify-center"} gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl transition-all duration-500 md:rounded-lg ${expanded ? "xl:pr-5" : ""}`}>
         <div className={`relative hidden xl:flex items-center ${expanded ? "ml-auto" : "mx-auto"} cursor-pointer select-none`} onClick={toggleExpand}>
           {expanded && <div className="text-white text-sm mr-2 transition-all duration-1000">Menu</div>}
           <Image src={hamburgerImg} alt="Menu" width={20} height={20} />

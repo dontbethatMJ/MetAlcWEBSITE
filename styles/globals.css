@@ -88,3 +88,10 @@
 .scroll-indicator {
   animation: float 0.5s linear infinite;
 }
+
+@font-face {
+  font-family: 'Anita';
+  src: url('/fonts/anita.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
