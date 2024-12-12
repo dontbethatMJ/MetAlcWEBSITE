@@ -32,6 +32,7 @@ module.exports = {
       fontFamily: {
         poppins: [`var(--font-poppins)`, "sans-serif"],
         comfortaa: [`var(--font-comfortaa)`, "sans-serif"],
+        anita: ['Anita', 'sans-serif'],
       },
     },
   },
