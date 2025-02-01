@@ -11,6 +11,7 @@ import testimonialsIcon from "../public/testimonials.webp";
 import contactIcon from "../public/contactus.webp";
 import blogIcon from "../public/newsletter.webp";
 import artworksIcon from "../public/artworks.webp";
+import consultIcon from "../public/consult.png";
 
 // Import hamburger icon
 import Image from "next/image";
@@ -25,6 +26,7 @@ export const navData = [
   { name: "aboutUs", path: "/aboutus", Icon: aboutIcon, text: "About Us" },
   // { name: "newsletter", path: "/newsletter", Icon: blogIcon, text: "NewsLetter" },
   { name: "artwork", path: "/artwork", Icon: artworksIcon, text: "Artwork" },
+  { name: "consultation", path: "https://www.maybetarun.in", Icon: consultIcon, text: "Consultation", target: "_blank" },
 ];
 
 const Nav = () => {

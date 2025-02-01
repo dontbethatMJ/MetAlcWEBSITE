@@ -34,7 +34,7 @@ const About = () => {
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
-            className="h2 text-2xl md:text-3xl lg:text-4xl mb-4 mt-8"
+            className="h2 text-2xl md:text-3xl lg:text-4xl mb-4 mt-20"
           >
             Our starting point <span className="text-[#6fc3ce]">. . .</span>
 
@@ -87,7 +87,7 @@ const About = () => {
           </motion.div>
 
           <motion.h2 
-            className="text-xl md:text-2xl lg:text-3xl font-bold mb-8 text-center"
+            className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 -mt-6 md:mb-2 text-center"
             variants={fadeIn("right", 0.2)} 
             initial="hidden" 
             animate="show"

@@ -51,7 +51,7 @@ const ServiceSlider = () => {
           slidesPerView: 3, 
         },
       }}
-      className="flex flex-wrap justify-center"
+      className="flex flex-wrap justify-center select-none"
     >
       {serviceData.map((service, index) => (
         <SwiperSlide key={index}>
